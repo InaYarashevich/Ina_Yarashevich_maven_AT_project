@@ -10,13 +10,12 @@ import org.openqa.selenium.support.Color;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.YearMonth;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class NewBookingTest {
+public class BookingTitleColorTest {
     static WebDriver driver = new ChromeDriver();
 
     public static void main(String[] args) {

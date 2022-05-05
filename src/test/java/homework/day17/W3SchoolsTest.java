@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class WSchoolsTest {
+public class W3SchoolsTest {
 
     static WebDriver driver = new ChromeDriver();
 
