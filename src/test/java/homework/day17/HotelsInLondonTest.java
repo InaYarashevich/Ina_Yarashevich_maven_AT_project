@@ -1,5 +1,6 @@
 package homework.day17;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,10 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.TextStyle;
 import java.util.Date;
-import java.util.Locale;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class HotelsInLondonTest {
@@ -38,6 +37,8 @@ public class HotelsInLondonTest {
         driver.findElement(By.xpath("//span[@aria-label='" + checkOutDate + " " + currentMonth + " 2022']"))
                 .click();
         driver.findElement(By.xpath("//button[@class='sb-searchbox__button ']")).click();
-
+        List<WebElement> hotelsList = driver.findElements(By.xpath("//div[@data-block-id='hotel_list']//h2/../div"));
+        Assert.assertFalse("The hotels' list do not have any results.", hotelsList.isEmpty());
+        driver.quit();
     }
 }
