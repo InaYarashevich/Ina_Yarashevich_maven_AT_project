@@ -38,6 +38,6 @@ public class HotelsInLondonTest {
         driver.findElement(By.xpath("//span[@aria-label='" + checkOutDate + " " + currentMonth + " 2022']"))
                 .click();
         driver.findElement(By.xpath("//button[@class='sb-searchbox__button ']")).click();
-        
+
     }
 }

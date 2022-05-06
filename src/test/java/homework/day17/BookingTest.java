@@ -81,16 +81,19 @@ public class BookingTest {
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        WebElement priceElement = driver.findElement(
+        WebElement hotelPriceElement = driver.findElement(
                 By.xpath(
                         "//div[@id='search_results_table']//div[@data-testid='property-card'][1]//div[@data-testid='price-and-discounted-price']/span"));
 
-        String result = priceElement.getText().replaceAll("[^0-9]", "");
-        int actualResult = Integer.parseInt(result);
-        //WebElement maxPricePerNight = driver.findElement(By.xpath());
+        String hotelPrice = hotelPriceElement.getText().replaceAll("[^0-9]", "");
+        int actualHotelPricePerNight = Integer.parseInt(hotelPrice) / 7;
+        WebElement maxPricePerNightElement = driver.findElement(By.xpath("//div[@data-filters-item='pri:pri=5']//div[@data-testid='filters-group-label-content']"));
+        String maxPricePerNight = maxPricePerNightElement.getText().replaceAll("[^0-9]", "");
+        int expectedMaxPricePerNight = Integer.parseInt(maxPricePerNight);
 
 
-        Assert.assertTrue("The actual hotel price is less than the expected max price",actualResult / 8 >= 1600);
+        Assert.assertTrue("The actual hotel price is less than the expected max price.",actualHotelPricePerNight
+                >= expectedMaxPricePerNight);
         driver.quit();
     }
 }
