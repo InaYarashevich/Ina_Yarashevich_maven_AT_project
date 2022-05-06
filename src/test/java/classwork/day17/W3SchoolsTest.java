@@ -1,4 +1,4 @@
-package homework.day17;
+package classwork.day17;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;

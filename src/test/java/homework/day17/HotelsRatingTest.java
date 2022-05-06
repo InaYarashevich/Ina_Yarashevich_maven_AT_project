@@ -5,17 +5,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class BookingTest {
+public class HotelsRatingTest {
 
     static WebDriver driver = new ChromeDriver();
 
@@ -32,67 +35,39 @@ public class BookingTest {
         int checkOutDate = checkInDate + 7;
 
         driver.get("https://www.booking.com/");
-        WebElement findParis = driver.findElement(By.xpath("//input[@type='search']"));
-        findParis.sendKeys("Париж");
+        WebElement city = driver.findElement(By.xpath("//input[@type='search']"));
+        city.sendKeys("Лондон");
         driver.findElement(By.xpath("//ul[@role='listbox']/li[1]")).click();
-
         driver.findElement(By.xpath("//span[@aria-label='" + checkInDate + " " + currentMonth + " 2022']"))
                 .click();
         driver.findElement(By.xpath("//span[@aria-label='" + checkOutDate + " " + currentMonth + " 2022']"))
                 .click();
-        driver.findElement(By.xpath("//span[contains(text(),'2 adults')]"))
-                .click();
-        WebElement numberOfAdults = driver.findElement(By
-                .xpath("//span[text()='+']/parent::*[@aria-label='Increase number of Adults']"));
-        numberOfAdults.click();
-        numberOfAdults.click();
-        driver.findElement(By.xpath("//span[text()='+']/parent::button[@aria-label='Increase number of Rooms']"))
-                .click();
         driver.findElement(By.xpath("//button[@class='sb-searchbox__button ']")).click();
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofMillis(5))
+                .ignoring(NoSuchElementException.class)
+                .until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        driver.findElement(By.xpath("//div[@data-filters-group='review_score']//input[@value='review_score=90']/../label/span")).click();
 
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-
         new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofMillis(5))
                 .ignoring(NoSuchElementException.class)
                 .until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
-
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        driver.findElement(By.xpath("//input[@name='pri=5']/following-sibling::label/span")).click();
+        driver.findElement(By.xpath("//div[@data-testid='property-card'][1]//img/..")).click();
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
 
-        new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(5))
-                .ignoring(NoSuchElementException.class)
-                .until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
-
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-        driver.findElement(By.xpath("//*[contains(text(),'Top picks ')]")).click();
-        driver.findElement(By.xpath("//*[text()='Price (lowest first)']")).click();
-
-        new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(5))
-                .ignoring(NoSuchElementException.class)
-                .until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
-
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-        WebElement hotelPriceElement = driver.findElement(
-                By.xpath(
-                        "//div[@id='search_results_table']//div[@data-testid='property-card'][1]//div[@data-testid='price-and-discounted-price']/span"));
-
-        String hotelPrice = hotelPriceElement.getText().replaceAll("[^0-9]", "");
-        int actualHotelPricePerNight = Integer.parseInt(hotelPrice) / 7;
-        WebElement maxPricePerNightElement = driver.findElement(By.xpath("//div[@data-filters-item='pri:pri=5']//div[@data-testid='filters-group-label-content']"));
-        String maxPricePerNight = maxPricePerNightElement.getText().replaceAll("[^0-9]", "");
-        int expectedMaxPricePerNight = Integer.parseInt(maxPricePerNight);
-
-        Assert.assertTrue("The actual hotel price is less than the expected max price.", actualHotelPricePerNight
-                >= expectedMaxPricePerNight);
-        driver.quit();
+        WebElement ratingElement = driver.findElement(By.xpath("//div[@data-testid='review-score-right-component']/div[@aria-label]"));
+        String rating = ratingElement.getText().replaceAll("[^0-9]", "");
+        long actualHotelRating = Integer.parseInt(rating);
+        Assert.assertTrue("The hotel's rating is less than 9.", actualHotelRating / 10 >= 9);
     }
 }
