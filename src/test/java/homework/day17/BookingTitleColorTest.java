@@ -27,18 +27,8 @@ public class BookingTitleColorTest {
         LocalDate currentLocalDate = LocalDate.now();
         int currentDay = currentLocalDate.getDayOfMonth();
         String currentMonth = new SimpleDateFormat("MMMM").format(new Date());
-        Date d = new Date();
-        String myDate = new SimpleDateFormat("dd/MM/yyyy").format(d);
-        int monthFromDate = Integer.parseInt(myDate.substring(3, 5));
-        int yearFromDate = Integer.parseInt(myDate.substring(6, 10));
-        YearMonth CurrentYear = YearMonth.of(yearFromDate, monthFromDate);
-        int lengthOfCurrentMonth = CurrentYear.lengthOfMonth();
         int checkInDate = currentDay + 3;
         int checkOutDate = checkInDate + 7;
-        if (lengthOfCurrentMonth >= 28 && checkInDate > lengthOfCurrentMonth){
-            Calendar calendar = Calendar.getInstance();
-            calendar.add(Calendar.MONTH, 1);
-        }
 
         driver.get("https://www.booking.com/");
         WebElement city = driver.findElement(By.xpath("//input[@type='search']"));

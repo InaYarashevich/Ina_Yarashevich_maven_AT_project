@@ -66,7 +66,7 @@ public class HotelsRatingTest {
         WebElement ratingElement = driver.findElement(By.xpath("//div[@data-testid='review-score-right-component']/div[@aria-label]"));
         String hotelRatingStr = ratingElement.getText().replaceAll("[^0-9]", "");
         long actualHotelRating = Integer.parseInt(hotelRatingStr);
-        Assert.assertTrue("The hotel's rating is less than 9.", actualHotelRating / 10 >= 9);
+        Assert.assertTrue("The hotel's rating is less than 9.", actualHotelRating >= 90);
         driver.quit();
     }
 }
