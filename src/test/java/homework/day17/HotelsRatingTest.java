@@ -60,7 +60,7 @@ public class HotelsRatingTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         driver.findElement(By.xpath("//div[@data-testid='property-card'][1]//img/..")).click();
-        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
 
         WebElement ratingElement = driver.findElement(By.xpath("//div[@data-testid='review-score-right-component']/div[@aria-label]"));

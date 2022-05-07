@@ -48,10 +48,8 @@ public class SelectTest {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", fourthSelect);
         fourthSelect.click();
 
-
         Select fifthSelect = new Select(driver.findElement(By.id("cars")));
         fifthSelect.selectByIndex(3);
-
     }
 
     @After
