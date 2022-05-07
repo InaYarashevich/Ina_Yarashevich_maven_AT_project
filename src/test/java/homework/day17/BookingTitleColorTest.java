@@ -10,8 +10,6 @@ import org.openqa.selenium.support.Color;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.YearMonth;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -53,9 +51,9 @@ public class BookingTitleColorTest {
         String color = title.getCssValue("color");
 
         String actualColor = Color.fromString(color).asHex();
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)", hotel);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].style.backgroundColor = 'green'", hotel);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].style.color = 'red'", title);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", hotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.backgroundColor = 'green'", hotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.color = 'red'", title);
         Assert.assertEquals("The title is not red!", "#0071c2", actualColor);
         driver.quit();
     }
