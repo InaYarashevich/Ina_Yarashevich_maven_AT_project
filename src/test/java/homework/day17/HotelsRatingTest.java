@@ -67,5 +67,6 @@ public class HotelsRatingTest {
         String hotelRatingStr = ratingElement.getText().replaceAll("[^0-9]", "");
         long actualHotelRating = Integer.parseInt(hotelRatingStr);
         Assert.assertTrue("The hotel's rating is less than 9.", actualHotelRating / 10 >= 9);
+        driver.quit();
     }
 }
