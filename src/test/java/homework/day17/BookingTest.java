@@ -36,9 +36,9 @@ public class BookingTest {
         findParis.sendKeys("Париж");
         driver.findElement(By.xpath("//ul[@role='listbox']/li[1]")).click();
 
-        driver.findElement(By.xpath("//span[@aria-label='" + checkInDate + " " + currentMonth + " 2022']"))
+        driver.findElement(By.xpath(String.format("//span[@aria-label='%s %s 2022']", checkInDate, currentMonth)))
                 .click();
-        driver.findElement(By.xpath("//span[@aria-label='" + checkOutDate + " " + currentMonth + " 2022']"))
+        driver.findElement(By.xpath(String.format("//span[@aria-label='%s %s 2022']", checkOutDate, currentMonth)))
                 .click();
         driver.findElement(By.xpath("//span[contains(text(),'2 adults')]"))
                 .click();
