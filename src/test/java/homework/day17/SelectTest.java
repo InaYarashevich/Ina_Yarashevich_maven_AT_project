@@ -3,11 +3,11 @@ package homework.day17;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +17,7 @@ public class SelectTest {
     @Before
     public void setUp(){
         SelectTest selectTest = new SelectTest();
+
     }
 
     @Test
@@ -27,16 +28,29 @@ public class SelectTest {
         driver.manage().window().maximize();
 
         driver.get("https://demoqa.com/select-menu");
-        WebElement selectOne = driver.findElement(By.id("selectOne"));
-        selectOne.click();
+        WebElement firstSelect = driver.findElement(By.id("withOptGroup"));
+        firstSelect.click();
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[contains(., 'Group 1, option 1')]"))))
+                .click();
 
-        WebElement oldSelectMenu = driver.findElement(By.id("oldSelectMenu"));
-        oldSelectMenu.click();
+        WebElement secondSelect = driver.findElement(By.id("selectOne"));
+        secondSelect.click();
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[contains(., 'Ms.')]"))))
+                .click();
+
+        WebElement thirdSelect = driver.findElement(By.id("oldSelectMenu"));
+        thirdSelect.click();
         Select oldStyleColorSelect = new Select(driver.findElement(By.id("oldSelectMenu")));
         oldStyleColorSelect.selectByIndex(3);
 
-        Select carsSelect = new Select(driver.findElement(By.id("cars")));
-        carsSelect.selectByIndex(3);
+        WebElement fourthSelect = driver.findElement(By.id("//*[text()='Multiselect drop down']"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", fourthSelect);
+        fourthSelect.click();
+
+
+        Select fifthSelect = new Select(driver.findElement(By.id("cars")));
+        fifthSelect.selectByIndex(3);
 
     }
 
