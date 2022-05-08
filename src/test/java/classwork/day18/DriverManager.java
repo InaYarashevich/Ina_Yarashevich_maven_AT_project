@@ -2,6 +2,7 @@ package classwork.day18;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -17,7 +18,9 @@ public class DriverManager {
     }
 
     private static WebDriver getChromeDriver(){
-        return new ChromeDriver();
+        ChromeOptions caps = new ChromeOptions();
+        caps.addArguments("start-maximized");
+        return new ChromeDriver(caps);
     }
 
     private static WebDriver getFirefoxDriver(){
