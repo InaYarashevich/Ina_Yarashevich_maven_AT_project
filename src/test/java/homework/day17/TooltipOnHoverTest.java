@@ -25,13 +25,13 @@ public class TooltipOnHoverTest {
         actions.moveToElement(currency);
         actions.perform();
         String tooltipCurrency = currency.getAttribute("data-tooltip-text");
-        Assert.assertEquals("The currency tooltip is incorrect!", "Choose your currency", tooltipCurrency);
+        Assert.assertEquals("The currency tooltip text is incorrect!", "Choose your currency", tooltipCurrency);
 
         WebElement language = driver.findElement(By.xpath("//button[@data-tooltip-text='Choose your currency']"));
         Actions actions1 = new Actions(driver);
         actions1.moveToElement(language);
         actions1.perform();
         String tooltipLanguage = currency.getAttribute("data-tooltip-text");
-        Assert.assertEquals("The language tooltip is incorrect!", "Choose your language", tooltipLanguage);
+        Assert.assertEquals("The language tooltip text is incorrect!", "Choose your language", tooltipLanguage);
     }
 }
