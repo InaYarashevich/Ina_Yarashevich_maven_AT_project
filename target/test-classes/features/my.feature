@@ -11,7 +11,7 @@ Feature: My first demo feature
     When I fill "Лондон" into form
     Then I see greeting message
 
-  @QA
+
   Scenario: My third demo test
     Given I open test site
     When I fill "Барселона" into form

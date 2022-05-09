@@ -79,4 +79,26 @@ public class Steps {
     public void after() {
         Driver.destroy();
     }
+
+    @When("I hover on currency icon")
+    public void iHoverOnCurrencyIcon() {
+        mainPage.getCurrencyTooltipText();
+    }
+
+    @Then("I see the currency element tooltip appears")
+    public void iSeeTheCurrencyElementTooltipAppears() {
+        Assert.assertEquals("The currency tooltip text is incorrect!",
+                mainPage.getCurrencyTooltipText(), mainPage.getCurrencyTooltipText());
+    }
+
+    @When("I hover on language icon")
+    public void iHoverOnLanguageIcon() {
+        mainPage.getLanguageTooltipText();
+    }
+
+    @Then("I see the language element tooltip appears")
+    public void iSeeTheLanguageElementTooltipAppears() {
+        Assert.assertEquals("The language tooltip text is incorrect!",
+                mainPage.getLanguageTooltipText(), mainPage.getLanguageTooltipText());
+    }
 }

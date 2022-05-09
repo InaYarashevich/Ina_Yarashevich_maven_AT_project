@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "summary"},
         glue = {"homework.day18"},
         features = {"src/test/resources/features/hotelsFilteringByPrice.feature",
-                "src/test/resources/features/hotelsResults.feature"},
+                "src/test/resources/features/hotelsResults.feature",
+                "src/test/resources/features/tooltips.feature"},
         strict = true
         //tags = {"@QA"}
 )

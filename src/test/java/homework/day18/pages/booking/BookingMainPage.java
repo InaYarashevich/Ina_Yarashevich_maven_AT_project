@@ -2,6 +2,7 @@ package homework.day18.pages.booking;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -9,11 +10,13 @@ import java.util.Date;
 
 public class BookingMainPage extends BookingBasePage {
 
-    static LocalDate currentDate = LocalDate.now();
-    static int currentDay = currentDate.getDayOfMonth();
-    static String currentMonth = new SimpleDateFormat("MMMM").format(new Date());
-    static int checkInDate = currentDay + 3;
-    static int checkOutDate = checkInDate + 7;
+    private static LocalDate currentDate = LocalDate.now();
+    private static int currentDay = currentDate.getDayOfMonth();
+    private static String currentMonth = new SimpleDateFormat("MMMM").format(new Date());
+    private static int checkInDate = currentDay + 3;
+    private static int checkOutDate = checkInDate + 7;
+    private static String expectedCurrencyTooltipText = "Choose your currency";
+    private static String expectedLanguageTooltipText = "Choose your language";
 
     private static final String SEARCH_FIELD_XPATH = "//input[@type='search']";
     private static final String LISTBOX_XPATH = "//ul[@role='listbox']/li[1]";
@@ -23,6 +26,9 @@ public class BookingMainPage extends BookingBasePage {
     private static final String NUMBER_OF_ADULTS_DROPDOWN_XPATH = "//span[contains(text(),'2 adults')]";
     private static final String INCREASE_NUMBER_OF_ADULTS_XPATH = "//span[text()='+']/parent::*[@aria-label='Increase number of Adults']";
     private static final String INCREASE_NUMBER_OF_ROOMS_XPATH = "//span[text()='+']/parent::button[@aria-label='Increase number of Rooms']";
+    private static final String CURRENCY_XPATH = "//button[@data-tooltip-text='Choose your currency']";
+    private static final String LANGUAGE_XPATH = "//button[@data-tooltip-text='Choose your currency']";
+
 
     public void searchCity(String cityName) {
         WebElement city = driver.findElement(By.xpath(SEARCH_FIELD_XPATH));
@@ -57,5 +63,31 @@ public class BookingMainPage extends BookingBasePage {
 
     public void search() {
         driver.findElement(By.xpath(SEARCH_BUTTON_XPATH)).click();
+    }
+
+    public String getCurrencyTooltipText(){
+        WebElement currency = driver.findElement(By.xpath(CURRENCY_XPATH));
+        return currency.getAttribute("data-tooltip-text");
+    }
+
+    public String getLanguageTooltipText(){
+        WebElement language = driver.findElement(By.xpath(LANGUAGE_XPATH));
+        return language.getAttribute("data-tooltip-text");
+    }
+
+    public static String getExpectedCurrencyTooltipText() {
+        return expectedCurrencyTooltipText;
+    }
+
+    public static void setExpectedCurrencyTooltipText(String expectedCurrencyTooltipText) {
+        BookingMainPage.expectedCurrencyTooltipText = expectedCurrencyTooltipText;
+    }
+
+    public static String getExpectedLanguageTooltipText() {
+        return expectedLanguageTooltipText;
+    }
+
+    public static void setExpectedLanguageTooltipText(String expectedLanguageTooltipText) {
+        BookingMainPage.expectedLanguageTooltipText = expectedLanguageTooltipText;
     }
 }
