@@ -5,11 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class HotelsInLondonTest {
@@ -37,7 +41,15 @@ public class HotelsInLondonTest {
         driver.findElement(By.xpath("//span[@aria-label='" + checkOutDate + " " + currentMonth + " 2022']"))
                 .click();
         driver.findElement(By.xpath("//button[@class='sb-searchbox__button ']")).click();
-        List<WebElement> hotelsList = driver.findElements(By.xpath("//div[@data-block-id='hotel_list']//h2/../div"));
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofMillis(5))
+                .ignoring(NoSuchElementException.class)
+                .until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        List<WebElement> hotelsList = driver.findElements(By.xpath("//div[@data-testid='property-card']"));
         Assert.assertFalse("The hotels' list do not have any results.", hotelsList.isEmpty());
         driver.quit();
     }

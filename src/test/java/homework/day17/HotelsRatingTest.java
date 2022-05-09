@@ -22,10 +22,11 @@ public class HotelsRatingTest {
 
     public static void main(String[] args) {
 
+
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
         LocalDate currentDate = LocalDate.now();
         int currentDay = currentDate.getDayOfMonth();
         String currentMonth = new SimpleDateFormat("MMMM").format(new Date());
