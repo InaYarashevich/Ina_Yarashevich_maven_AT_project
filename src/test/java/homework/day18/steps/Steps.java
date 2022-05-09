@@ -70,6 +70,11 @@ public class Steps {
                 sortedResultPage.getHotelPrice() >= sortedResultPage.getMaxPrice());
     }
 
+    @Then("I see the list of the hotels")
+    public void iSeeTheListOfTheHotels() {
+        Assert.assertFalse("The are no hotels' results.", resultPage.getResults().isEmpty());
+    }
+
     @After
     public void after() {
         Driver.destroy();

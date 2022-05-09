@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: homework.day18.runners.BookingRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.448 s - in homework.day18.runners.BookingRunner
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.751 s - in homework.day18.runners.BookingRunner

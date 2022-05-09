@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty", "summary"},
         glue = {"homework.day18"},
-        features = {"src/test/resources/features/hotelsFilteringByPrice.feature"},
+        features = {"src/test/resources/features/hotelsFilteringByPrice.feature",
+                "src/test/resources/features/hotelsResults.feature"},
         strict = true
         //tags = {"@QA"}
 )
