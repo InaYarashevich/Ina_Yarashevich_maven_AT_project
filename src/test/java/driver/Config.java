@@ -1,4 +1,4 @@
-package classwork.day18;
+package driver;
 
 public enum Config {
 

@@ -1,8 +1,8 @@
 package classwork.day19.steps;
 
-import classwork.day18.Driver;
 import classwork.day19.pages.BookingMainPage;
 import classwork.day19.pages.BookingResultPage;
+import driver.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

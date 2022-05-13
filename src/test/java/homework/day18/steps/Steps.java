@@ -1,6 +1,6 @@
 package homework.day18.steps;
 
-import classwork.day18.Driver;
+import driver.Driver;
 import homework.day18.pages.booking.BookingFilteredResultPage;
 import homework.day18.pages.booking.BookingMainPage;
 import homework.day18.pages.booking.BookingResultPage;
