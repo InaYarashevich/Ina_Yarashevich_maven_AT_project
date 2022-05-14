@@ -25,18 +25,10 @@ public class BookingHomepage extends BookingBasePage {
     private static final String PROPERTY_ICON_XPATH = "//span[contains(text(), 'List your property')]";
     private static final String PROFILE_MENU_CSS = "#profile-menu-trigger--content";
     private static final String HEADER_NAVIGATION_CSS = "header .bui-tab__nav";
-    private static final String CITY_SEARCH_FIELD_XPATH = "//input[@type='search']";
-    private static final String LISTBOX_XPATH = "//ul[@role='listbox']/li[1]";
-    private static final String SEARCH_BUTTON_XPATH = "//button[@class='sb-searchbox__button ']";
-    private static final String CHECKIN_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkInDate, currentMonth);
-    private static final String CHECKOUT_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkOutDate, currentMonth);
-    private static final String NUMBER_OF_ADULTS_DROPDOWN_XPATH = "//span[contains(text(),'2 adults')]";
-    private static final String INCREASE_NUMBER_OF_ADULTS_XPATH = "//span[text()='+']/parent::*[@aria-label='Increase number of Adults']";
-    private static final String INCREASE_NUMBER_OF_ROOMS_XPATH = "//span[text()='+']/parent::button[@aria-label='Increase number of Rooms']";
+    private static final String WELCOME_POPUP_CLOSE_BUTTON_CSS = ".modal-mask-closeBtn";
 
-
-    public void getHomepage() {
-
+    public void getHomepage(){
+        driver.findElement(By.cssSelector(WELCOME_POPUP_CLOSE_BUTTON_CSS)).click();
     }
 
     public WebElement getGreeting() {

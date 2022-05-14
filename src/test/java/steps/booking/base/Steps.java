@@ -212,4 +212,32 @@ public class Steps {
         Assert.assertTrue("Header navigation element is absent on the page.",
                 homepage.getHeaderNavigation().isDisplayed());
     }
+
+    @And("Homepage is opened")
+    public void homepageIsOpened() {
+        homepage.getHomepage();
+    }
+
+    @And("I save the first item in the list to wishlist")
+    public void iSaveTheFirstItemInTheListToWishlist() {
+        resultPage.addToWishlist(0);
+    }
+
+    @And("I save the last item in the list to wishlist")
+    public void iSaveTheLastItemInTheListToWishlist() {
+        resultPage.addToWishlist(24);
+    }
+
+    @And("I open wishlist")
+    public void iOpenWishlist() {
+        resultPage.navigateToWishlist();
+    }
+
+    @Then("I see the first saved item on the page")
+    public void iSeeTheStSavedItemOnThePage() {
+    }
+
+    @Then("I see the last saved item on the page")
+    public void iSeeTheLastSavedItemOnThePage() {
+    }
 }

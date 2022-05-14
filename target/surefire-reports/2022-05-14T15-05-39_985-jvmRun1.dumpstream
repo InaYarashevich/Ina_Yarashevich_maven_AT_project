@@ -1,0 +1,245 @@
+# Created at 2022-05-14T15:06:07.597
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:396)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+# Created at 2022-05-14T15:06:29.076
+Unexpected IOException with stream:     [31mAnd [0m[31mI select the number of the rooms[0m [90m# Steps.iSelectTheNumberOfTheRooms()[0m
+
+
+# Created at 2022-05-14T15:06:29.080
+Unexpected IOException with stream:       [31morg.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.64)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\IT0054\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62943}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 299a43efea9bee8e7fdedf86bfff97d0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pages.booking.BookingMainPage.selectNumberOfRooms(BookingMainPage.java:62)
+	at steps.booking.base.Steps.iSelectTheNumberOfTheRooms(Steps.java:58)
+	at ?.I select the number of the rooms(file:src/test/resources/features/wishlist.feature:14)
+[0m
+
+
+# Created at 2022-05-14T15:06:29.082
+Unexpected IOException with stream:     [36mAnd [0m[36mI click on the Search button[0m     [90m# Steps.iClickOnTheSearchButton()[0m
+
+
+# Created at 2022-05-14T15:06:31.400
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.402
+Unexpected IOException with stream: [31mFailed scenarios:[0m
+
+
+# Created at 2022-05-14T15:06:31.403
+Unexpected IOException with stream: [31msrc/test/resources/features/wishlist.feature:3 [0m
+
+# Created at 2022-05-14T15:06:31.404
+Unexpected IOException with stream: # Saving items to wishlist
+
+
+# Created at 2022-05-14T15:06:31.406
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.407
+Unexpected IOException with stream: 1
+
+# Created at 2022-05-14T15:06:31.409
+Unexpected IOException with stream:  Scenarios (
+
+# Created at 2022-05-14T15:06:31.410
+Unexpected IOException with stream: [31m1 failed[0m
+
+# Created at 2022-05-14T15:06:31.412
+Unexpected IOException with stream: )
+
+
+# Created at 2022-05-14T15:06:31.413
+Unexpected IOException with stream: 12
+
+# Created at 2022-05-14T15:06:31.415
+Unexpected IOException with stream:  Steps (
+
+# Created at 2022-05-14T15:06:31.416
+Unexpected IOException with stream: [31m1 failed[0m
+
+# Created at 2022-05-14T15:06:31.418
+Unexpected IOException with stream: , 
+
+# Created at 2022-05-14T15:06:31.420
+Unexpected IOException with stream: [36m1 skipped[0m
+
+# Created at 2022-05-14T15:06:31.421
+Unexpected IOException with stream: , 
+
+# Created at 2022-05-14T15:06:31.423
+Unexpected IOException with stream: [32m10 passed[0m
+
+# Created at 2022-05-14T15:06:31.424
+Unexpected IOException with stream: )
+
+
+# Created at 2022-05-14T15:06:31.426
+Unexpected IOException with stream: 0m
+
+# Created at 2022-05-14T15:06:31.429
+Unexpected IOException with stream: 49.364s
+
+
+# Created at 2022-05-14T15:06:31.430
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.432
+Unexpected IOException with stream: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.64)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\IT0054\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62943}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 299a43efea9bee8e7fdedf86bfff97d0
+
+# Created at 2022-05-14T15:06:31.434
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.435
+Unexpected IOException with stream: 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+
+# Created at 2022-05-14T15:06:31.437
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.439
+Unexpected IOException with stream: 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+
+# Created at 2022-05-14T15:06:31.440
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.441
+Unexpected IOException with stream: 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+
+# Created at 2022-05-14T15:06:31.443
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.446
+Unexpected IOException with stream: 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+
+# Created at 2022-05-14T15:06:31.447
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.449
+Unexpected IOException with stream: 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+
+# Created at 2022-05-14T15:06:31.450
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.452
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+
+# Created at 2022-05-14T15:06:31.453
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.454
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+
+# Created at 2022-05-14T15:06:31.456
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.458
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+
+# Created at 2022-05-14T15:06:31.460
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.463
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+
+# Created at 2022-05-14T15:06:31.465
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.467
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+
+# Created at 2022-05-14T15:06:31.469
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.471
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+
+# Created at 2022-05-14T15:06:31.474
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.477
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+
+# Created at 2022-05-14T15:06:31.479
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.481
+Unexpected IOException with stream: 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+
+# Created at 2022-05-14T15:06:31.482
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.484
+Unexpected IOException with stream: 	at pages.booking.BookingMainPage.selectNumberOfRooms(BookingMainPage.java:62)
+
+# Created at 2022-05-14T15:06:31.485
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.486
+Unexpected IOException with stream: 	at steps.booking.base.Steps.iSelectTheNumberOfTheRooms(Steps.java:58)
+
+# Created at 2022-05-14T15:06:31.488
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.489
+Unexpected IOException with stream: 	at ?.I select the number of the rooms(file:src/test/resources/features/wishlist.feature:14)
+
+# Created at 2022-05-14T15:06:31.491
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:31.492
+Unexpected IOException with stream: 
+
+
+# Created at 2022-05-14T15:06:32.037
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGDirectoryTestSuite,TestSuite,null,null,null
+
+
