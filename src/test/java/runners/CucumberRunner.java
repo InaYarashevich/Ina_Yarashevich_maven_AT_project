@@ -1,4 +1,4 @@
-package runners.booking;
+package runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
