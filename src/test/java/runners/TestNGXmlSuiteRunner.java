@@ -7,7 +7,7 @@ import org.testng.xml.internal.Parser;
 import java.io.IOException;
 import java.util.List;
 
-public class TestNGXmlSuite {
+public class TestNGXmlSuiteRunner {
 
     public static void main(String[] args) throws IOException {
         final TestNG testNG = new TestNG(true);
