@@ -1,4 +1,8 @@
+runners\TestNGXmlSuiteRunner.class
+tests\BookingLoginTest.class
 steps\booking\base\Steps.class
 pages\booking\BookingHomepage.class
+runners\JUnit4Runner.class
+runners\CucumberRunner.class
 pages\booking\BookingMainPage.class
-runners\booking\BookingRunner.class
+runners\TestNGYamlRunner.class

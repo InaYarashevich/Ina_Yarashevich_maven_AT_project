@@ -1,7 +1,7 @@
 Feature: Hotels filtering by max price per night
 
   Scenario: Booking hotel price per night
-    Given I open Booking page
+    Given I open Booking main page
     When I fill "Париж"  in the field
     And I select check in date
     And I select checkout date

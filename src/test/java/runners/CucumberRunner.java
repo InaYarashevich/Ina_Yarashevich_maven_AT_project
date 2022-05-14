@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "summary"},
         glue = {"steps"},
         features = {
-                "src/test/resources/features/wishlist.feature"},
+                },
         strict = true
         //tags = {"@QA"}
 )
