@@ -27,6 +27,7 @@ public class Steps {
     BookingHomepage homepage = new BookingHomepage();
     BookingSignInEmailPage signInEmailPage = new BookingSignInEmailPage();
     BookingSignInPasswordPage signInPasswordPage = new BookingSignInPasswordPage();
+    BookingWishlistPage wishlistPage = new BookingWishlistPage();
 
     @Given("I open Booking main page")
     public void iOpenBookingPage() {
@@ -235,9 +236,13 @@ public class Steps {
 
     @Then("I see the first saved item on the page")
     public void iSeeTheStSavedItemOnThePage() {
+      Assert.assertTrue("Saved hotel is not displayed in the wishlist.",
+              wishlistPage.getSavedHotelTitle(1).equalsIgnoreCase(resultPage.getHotelTitle(0)));
     }
 
     @Then("I see the last saved item on the page")
     public void iSeeTheLastSavedItemOnThePage() {
+        Assert.assertTrue("Saved hotel is not displayed in the wishlist.",
+                wishlistPage.getSavedHotelTitle(0).equalsIgnoreCase(resultPage.getHotelTitle(24)));
     }
 }
