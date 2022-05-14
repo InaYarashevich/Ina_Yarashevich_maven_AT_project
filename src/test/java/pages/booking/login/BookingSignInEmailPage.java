@@ -6,12 +6,12 @@ import utils.CreateMailUtils;
 
 public class BookingSignInEmailPage extends BookingBasePage {
 
-    private static final String EMAIL_INPUT = "#username";
+    private static final String EMAIL_INPUT_CSS = "#username";
     private static final String SUBMIT_BUTTON_XPATH = "//button[@type='submit']";
     CreateMailUtils createMail = new CreateMailUtils();
 
     public void inputEmail() {
-        driver.findElement(By.cssSelector(EMAIL_INPUT)).sendKeys("renee.brakus@trashmail.fr");
+        driver.findElement(By.cssSelector(EMAIL_INPUT_CSS)).sendKeys("renee.brakus@trashmail.fr");
     }
 
     public void submitEmail() {

@@ -1,9 +1,4 @@
 steps\booking\base\Steps.class
-pages\booking\BookingFilteredResultPage.class
-pages\booking\BookingResultPage.class
-pages\booking\BookingBasePage.class
-runners\booking\TestNGWithYamlRunner.class
 pages\booking\BookingHomepage.class
-pages\booking\BookingSortedResultPage.class
 pages\booking\BookingMainPage.class
 runners\booking\BookingRunner.class

@@ -22,7 +22,7 @@ public class GetEmailUtils {
 
         Store store = emailSession.getStore("pop3s");
 
-        store.connect("imap.gmail.com", "ina.yarashevich@gmail.com", "Orange@pepper%29");
+        store.connect("imap.gmail.com", "ina.yarashevich@gmail.com", "mypassword");
 
         Folder folderInbox = store.getFolder("INBOX");
         folderInbox.open(Folder.READ_ONLY);
