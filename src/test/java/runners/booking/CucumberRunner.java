@@ -14,6 +14,6 @@ import org.junit.runner.RunWith;
         //tags = {"@QA"}
 )
 
-public class BookingRunner {
+public class CucumberRunner {
 
 }
