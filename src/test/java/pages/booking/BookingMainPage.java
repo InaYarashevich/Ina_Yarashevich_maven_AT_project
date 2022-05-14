@@ -26,8 +26,8 @@ public class BookingMainPage extends BookingBasePage {
     private static final String NUMBER_OF_ADULTS_DROPDOWN_XPATH = "//span[contains(text(),'2 adults')]";
     private static final String INCREASE_NUMBER_OF_ADULTS_XPATH = "//span[text()='+']/parent::*[@aria-label='Increase number of Adults']";
     private static final String INCREASE_NUMBER_OF_ROOMS_XPATH = "//span[text()='+']/parent::button[@aria-label='Increase number of Rooms']";
-    private static final String CURRENCY_XPATH = "//button[@data-tooltip-text='Choose your currency']";
-    private static final String LANGUAGE_XPATH = "//button[@data-tooltip-text='Choose your currency']";
+    public static final String CURRENCY_XPATH = "//button[@data-tooltip-text='Choose your currency']";
+    public static final String LANGUAGE_XPATH = "//button[@data-tooltip-text='Choose your currency']";
     private static final String REGISTER_BUTTON_XPATH = "//span[contains(text(), 'List your property')]/../../following-sibling::div/a/span[contains(text(), 'Register')]";
     private static final String SIGNIN_BUTTON_XPATH = "//nav[@class='bui-header__bar']//*[contains(text(),'Sign in')]/..";
 

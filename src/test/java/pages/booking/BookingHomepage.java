@@ -8,6 +8,9 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
+import static pages.booking.BookingMainPage.CURRENCY_XPATH;
+import static pages.booking.BookingMainPage.LANGUAGE_XPATH;
+
 public class BookingHomepage extends BookingBasePage {
 
     private static LocalDate currentDate = LocalDate.now();
@@ -18,8 +21,6 @@ public class BookingHomepage extends BookingBasePage {
 
     private static final String ONBOARDING_MODAL_CSS = "#genius-onboarding-title";
     private static final String BOOKING_LOGO_CSS = ".bui-header__logo";
-    private static final String CURRENCY_XPATH = "//button[@data-tooltip-text='Choose your currency']";
-    private static final String LANGUAGE_XPATH = "//button[@data-tooltip-text='Choose your currency']";
     private static final String CUSTOMER_SERVICE_CSS = "a[data-tooltip-text='Contact Customer Service']";
     private static final String NOTIFICATIONS_BELL_ICON_CSS = "button[data-text='View your notifications']";
     private static final String PROPERTY_ICON_XPATH = "//span[contains(text(), 'List your property')]";

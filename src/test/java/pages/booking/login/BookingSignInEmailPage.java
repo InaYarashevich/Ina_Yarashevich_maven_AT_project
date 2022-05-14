@@ -6,8 +6,8 @@ import utils.CreateMailUtils;
 
 public class BookingSignInEmailPage extends BookingBasePage {
 
-    private static final String EMAIL_INPUT_CSS = "#username";
-    private static final String SUBMIT_BUTTON_XPATH = "//button[@type='submit']";
+    public static final String EMAIL_INPUT_CSS = "#username";
+    public static final String SUBMIT_BUTTON_XPATH = "//button[@type='submit']";
     CreateMailUtils createMail = new CreateMailUtils();
 
     public void inputEmail() {

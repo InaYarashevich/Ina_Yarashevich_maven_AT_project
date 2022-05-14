@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import pages.booking.base.BookingBasePage;
 import utils.CreateMailUtils;
 
+import static pages.booking.login.BookingSignInEmailPage.EMAIL_INPUT_CSS;
+import static pages.booking.login.BookingSignInEmailPage.SUBMIT_BUTTON_XPATH;
+
 public class BookingRegisterEmailPage extends BookingBasePage {
 
     CreateMailUtils createMail = new CreateMailUtils();
-    private static final String EMAIL_INPUT_CSS = "#username";
-    private static final String SUBMIT_BUTTON_XPATH = "//button[@type='submit']";
 
     public void inputEmail(){
         driver.findElement(By.cssSelector(EMAIL_INPUT_CSS)).sendKeys(createMail.createTempMail());
