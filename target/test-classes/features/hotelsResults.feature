@@ -1,7 +1,7 @@
 Feature: Hotels results list
 
   Scenario: Hotels results list is not empty
-    Given I open Booking page
+    Given I open Booking main page
     When I fill "Лондон"  in the field
     And I select check in date
     And I select checkout date
