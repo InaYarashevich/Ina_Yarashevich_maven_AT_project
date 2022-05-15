@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty", "summary"},
         glue = {"steps"},
-        features = {
+        features = {"src/test/resources/features/wishlist.feature"
                 },
         strict = true
         //tags = {"@QA"}

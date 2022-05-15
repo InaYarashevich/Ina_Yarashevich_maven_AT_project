@@ -1,6 +1,5 @@
 runners\TestNGXmlSuiteRunner.class
 tests\BookingLoginTest.class
-steps\booking\base\Steps.class
 pages\booking\BookingHomepage.class
 runners\JUnit4Runner.class
 runners\CucumberRunner.class

@@ -1,4 +1,4 @@
-package steps.booking.base;
+package steps;
 
 import driver.Driver;
 import io.cucumber.java.After;

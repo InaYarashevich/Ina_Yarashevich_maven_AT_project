@@ -8,7 +8,7 @@ public class CreateMailUtils {
 
     public WebDriver driver = Driver.getWebDriver();
     private static final String REAL_EMAIL_CSS = "#fe-forward";
-    private static String email = "ina.yarashevich@gmail.com";
+    private static String email = "igyarashevich@gmail.com";
     private static final String NUMBER_OF_FORWARDS_DROPDOWN_CSS = "#fe-fwd-nb~div";
     private static final String SUBMIT_BUTTON_CSS = "#fe-submit";
 
