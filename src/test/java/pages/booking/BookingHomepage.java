@@ -28,43 +28,42 @@ public class BookingHomepage extends BookingBasePage {
     private static final String HEADER_NAVIGATION_CSS = "header .bui-tab__nav";
     private static final String WELCOME_POPUP_CLOSE_BUTTON_CSS = ".modal-mask-closeBtn";
 
-    public void getHomepage(){
+    public void closeWelcomePopup() {
         driver.findElement(By.cssSelector(WELCOME_POPUP_CLOSE_BUTTON_CSS)).click();
+    }
+
+    public WebElement getWebElement(String element) {
+        WebElement webElement = null;
+        switch (element) {
+            case "BOOKING_LOGO":
+                webElement = driver.findElement(By.cssSelector(BOOKING_LOGO_CSS));
+                break;
+            case "CURRENCY":
+                webElement = driver.findElement(By.xpath(CURRENCY_XPATH));
+                break;
+            case "LANGUAGE":
+                webElement = driver.findElement(By.xpath(LANGUAGE_XPATH));
+                break;
+            case "PROFILE_MENU":
+                webElement = driver.findElement(By.cssSelector(PROFILE_MENU_CSS));
+                break;
+            case "CUSTOMER_SERVICE":
+                webElement = driver.findElement(By.cssSelector(CUSTOMER_SERVICE_CSS));
+                break;
+            case "NOTIFICATIONS_BELL_ICON":
+                webElement = driver.findElement(By.cssSelector(NOTIFICATIONS_BELL_ICON_CSS));
+                break;
+            case "YOUR_PROPERTY_ICON":
+                webElement = driver.findElement(By.xpath(PROPERTY_ICON_XPATH));
+                break;
+            case "HEADER_NAVIGATION":
+                webElement = driver.findElement(By.cssSelector(HEADER_NAVIGATION_CSS));
+                break;
+        }
+        return webElement;
     }
 
     public WebElement getGreeting() {
         return driver.findElement(By.cssSelector(ONBOARDING_MODAL_CSS));
-    }
-
-    public WebElement getBookingLogoElement() {
-        return driver.findElement(By.cssSelector(BOOKING_LOGO_CSS));
-    }
-
-    public WebElement getLanguageElement() {
-        return driver.findElement(By.xpath(LANGUAGE_XPATH));
-    }
-
-    public WebElement getCurrencyElement() {
-        return driver.findElement(By.xpath(CURRENCY_XPATH));
-    }
-
-    public WebElement getCustomerServiceElement() {
-        return driver.findElement(By.cssSelector(CUSTOMER_SERVICE_CSS));
-    }
-
-    public WebElement getNotificationsBell() {
-        return driver.findElement(By.cssSelector(NOTIFICATIONS_BELL_ICON_CSS));
-    }
-
-    public WebElement getPropertyIcon() {
-        return driver.findElement(By.xpath(PROPERTY_ICON_XPATH));
-    }
-
-    public WebElement getProfileMenu() {
-        return driver.findElement(By.cssSelector(PROFILE_MENU_CSS));
-    }
-
-    public WebElement getHeaderNavigation() {
-        return driver.findElement(By.cssSelector(HEADER_NAVIGATION_CSS));
     }
 }

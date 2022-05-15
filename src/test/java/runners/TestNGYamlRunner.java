@@ -11,7 +11,7 @@ public class TestNGYamlRunner {
 
     public static void main(String[] args) throws IOException {
         final TestNG testNG = new TestNG(true);
-        final Parser parser = new Parser(".yaml");
+        final Parser parser = new Parser("src/main/java/testng/testng.yaml");
         final List<XmlSuite> suites = parser.parseToList();
         testNG.setXmlSuites(suites);
         testNG.run();

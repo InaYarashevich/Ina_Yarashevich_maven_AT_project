@@ -1,0 +1,5 @@
+name: YAML Test suite
+parallel: classes
+threadCount: 2
+tests: Booking Tests
+  - suites.textng.BookingLoginTest
