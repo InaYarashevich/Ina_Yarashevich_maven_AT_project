@@ -1,23 +1,26 @@
-package utils;
+package pages.utils;
 
 import driver.Driver;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class CreateMailUtils {
+public class TrashmailMainPage {
 
     public WebDriver driver = Driver.getWebDriver();
     private static final String REAL_EMAIL_CSS = "#fe-forward";
-    private static String email = "igyarashevich@gmail.com";
     private static final String NUMBER_OF_FORWARDS_DROPDOWN_CSS = "#fe-fwd-nb~div";
     private static final String SUBMIT_BUTTON_CSS = "#fe-submit";
+    private static final String CREATED_EMAIL_CSS = "#fe-dea";
 
-    public String createTempMail() {
+    public String getMail(String realEmail) {
 
         driver.get("https://trashmail.com/?lang=en");
         WebElement emailInput = driver.findElement(By.cssSelector(REAL_EMAIL_CSS));
         emailInput.clear();
-        emailInput.sendKeys(email);
+        emailInput.sendKeys(realEmail);
         driver.findElement(By.cssSelector(NUMBER_OF_FORWARDS_DROPDOWN_CSS)).click();
         Actions select = new Actions(driver);
         select
@@ -29,6 +32,6 @@ public class CreateMailUtils {
                 .build().perform();
         driver.findElement(By.cssSelector(SUBMIT_BUTTON_CSS)).click();
 
-        return driver.findElement(By.cssSelector("#fe-dea")).getAttribute("value");
+        return driver.findElement(By.cssSelector(CREATED_EMAIL_CSS)).getAttribute("value");
     }
 }

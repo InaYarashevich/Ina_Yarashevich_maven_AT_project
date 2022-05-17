@@ -4,11 +4,11 @@ import javax.mail.*;
 import java.util.Properties;
 
 
-public class GetEmailUtils {
+public class GetEmailGmail {
 
     public void readGmail() throws Exception {
 
-        CreateMailUtils createMailUtils = new CreateMailUtils();
+        CreatingTempMail createMailUtils = new CreatingTempMail();
 
         Properties props = System.getProperties();
         props.setProperty("mail.store.protocol", "imaps");
@@ -33,8 +33,7 @@ public class GetEmailUtils {
 
         for (int i = messages.length - 1; i >= 0; i--) {
             Message message = messages[i];
-            if (message.getSubject().contains("One click to confirm")
-                    && message.getContent().toString().contains(createMailUtils.createTempMail())) {
+            if (message.getSubject().contains("One click to confirm")) {
                 System.out.println(message.getContent());
                 break;
             }
@@ -45,7 +44,7 @@ public class GetEmailUtils {
     }
 
     public static void main(String[] args) throws Exception {
-        GetEmailUtils getEmail = new GetEmailUtils();
+        GetEmailGmail getEmail = new GetEmailGmail();
         getEmail.readGmail();
     }
 }

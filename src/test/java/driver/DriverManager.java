@@ -20,7 +20,7 @@ public class DriverManager {
     private static WebDriver getChromeDriver(){
         ChromeOptions caps = new ChromeOptions();
         caps.addArguments("start-maximized");
-        caps.addArguments("incognito");
+       // caps.addArguments("incognito");
 
         return new ChromeDriver(caps);
     }
