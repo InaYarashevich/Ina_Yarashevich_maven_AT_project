@@ -3,13 +3,13 @@ package utils;
 import pages.utils.MailRuInboxFolderPage;
 import pages.utils.MailRuMainPage;
 
-public class GetEmailMailRu {
+public class MailConfirmation {
 
     MailRuMainPage mainPage = new MailRuMainPage();
     MailRuInboxFolderPage inboxFolderPage = new MailRuInboxFolderPage();
 
-    public void getEmail(String accountName, String password) {
+    public void confirmRegistration(String accountName, String password, String emailSubject) {
         mainPage.loginMailRu(accountName, password);
-        inboxFolderPage.confirm("One click to confirm");
+        inboxFolderPage.confirm(emailSubject);
     }
 }

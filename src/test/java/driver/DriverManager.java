@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverManager {
 
@@ -17,19 +18,20 @@ public class DriverManager {
         };
     }
 
-    private static WebDriver getChromeDriver(){
+    private static WebDriver getChromeDriver() {
         ChromeOptions caps = new ChromeOptions();
         caps.addArguments("start-maximized");
-       // caps.addArguments("incognito");
-
+        // caps.addArguments("incognito");
         return new ChromeDriver(caps);
     }
 
-    private static WebDriver getFirefoxDriver(){
+    private static WebDriver getFirefoxDriver() {
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("start-maximized");
         return new FirefoxDriver();
     }
 
-    private static WebDriver getEdgeDriver(){
+    private static WebDriver getEdgeDriver() {
         return new EdgeDriver();
     }
 }

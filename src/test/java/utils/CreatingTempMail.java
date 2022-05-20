@@ -5,8 +5,13 @@ import pages.utils.TrashmailMainPage;
 public class CreatingTempMail {
 
     TrashmailMainPage mainPage = new TrashmailMainPage();
+    private String tempEmail = null;
 
-    public void createTempMail(String realEmail) {
-        mainPage.getMail(realEmail);
+    public String getTempEmail() {
+        return tempEmail;
+    }
+
+    public String createTempMail(String realEmail) {
+        return mainPage.getMail(realEmail);
     }
 }

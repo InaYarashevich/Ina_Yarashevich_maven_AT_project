@@ -15,7 +15,7 @@ public class BookingRegistrationPage extends BookingBasePage {
     public void register(String email, String password) {
         driver.findElement(By.cssSelector(EMAIL_INPUT_CSS)).sendKeys(email);
         driver.findElement(By.xpath(SUBMIT_BUTTON_XPATH)).click();
-        driver.findElement(By.xpath(NEW_PASSWORD_CSS)).sendKeys(password);
+        driver.findElement(By.cssSelector(NEW_PASSWORD_CSS)).sendKeys(password);
         driver.findElement(By.cssSelector(CONFIRMED_PASSWORD_CSS)).sendKeys(password);
         driver.findElement(By.xpath(CREATE_ACCOUNT_BUTTON_XPATH)).click();
     }

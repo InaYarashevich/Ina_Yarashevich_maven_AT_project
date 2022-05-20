@@ -27,9 +27,25 @@ public class BookingHomepage extends BookingBasePage {
     private static final String PROFILE_MENU_CSS = "#profile-menu-trigger--content";
     private static final String HEADER_NAVIGATION_CSS = "header .bui-tab__nav";
     private static final String WELCOME_POPUP_CLOSE_BUTTON_CSS = ".modal-mask-closeBtn";
+    private static final String MANAGE_ACCOUNT_XPATH = "//span[contains(text(),'Manage account')]";
+    private static final String SEARCH_INPUT_FIELD_CSS = "#ss";
+
+    public void searchCity(String cityName) {
+        WebElement city = driver.findElement(By.cssSelector(SEARCH_INPUT_FIELD_CSS));
+        city.clear();
+        city.sendKeys(cityName);
+    }
+
+    public void getAccountSettingsPage() {
+        driver.findElement(By.cssSelector(PROFILE_MENU_CSS)).click();
+        driver.findElement(By.xpath(MANAGE_ACCOUNT_XPATH)).click();
+    }
 
     public void closeWelcomePopup() {
-        driver.findElement(By.cssSelector(WELCOME_POPUP_CLOSE_BUTTON_CSS)).click();
+        if (driver.findElement(By.cssSelector(WELCOME_POPUP_CLOSE_BUTTON_CSS)).isDisplayed()){
+            System.out.println(driver.findElement(By.cssSelector(WELCOME_POPUP_CLOSE_BUTTON_CSS)).isDisplayed());
+            driver.findElement(By.cssSelector(WELCOME_POPUP_CLOSE_BUTTON_CSS)).click();
+        }
     }
 
     public WebElement getWebElement(String element) {

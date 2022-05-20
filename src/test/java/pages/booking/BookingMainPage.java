@@ -76,7 +76,7 @@ public class BookingMainPage extends BookingBasePage {
         return language.getAttribute("data-tooltip-text");
     }
 
-    public void initRegistration() {
+    public void startRegistration() {
         driver.findElement(By.xpath(REGISTER_BUTTON_XPATH)).click();
     }
 

@@ -10,11 +10,6 @@ import org.junit.Assert;
 
 public class LoginSteps extends BaseSteps {
 
-    @Given("I open Booking main page")
-    public void iOpenBookingPage() {
-        Driver.getWebDriver().get("https://www.booking.com/");
-    }
-
     @When("I click on Sign in button")
     public void iClickOnSignInButton() {
         mainPage.clickSignIn();
