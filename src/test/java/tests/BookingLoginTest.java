@@ -27,7 +27,7 @@ public class BookingLoginTest {
         String email = tempMail.createTempMail("jane.doe2022@mail.ru");
         Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.clickSignIn();
-        signInPage.signIn("lemke.casimir@trashmail.fr", "Automation2022!");
+        signInPage.signIn(email, "Automation2022!");
         Assert.assertTrue("PROFILE_MENU element is not displayed on the page!",
                 homepage.getWebElement("PROFILE_MENU").isDisplayed());
         Assert.assertTrue("BOOKING_LOGO element is not displayed on the page!",
