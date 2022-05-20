@@ -16,7 +16,6 @@ public class TrashmailMainPage {
     private static final String CREATED_EMAIL_CSS = "#fe-dea";
 
     public String getMail(String realEmail) {
-
         driver.get("https://trashmail.com/?lang=en");
         WebElement emailInput = driver.findElement(By.cssSelector(REAL_EMAIL_CSS));
         emailInput.clear();

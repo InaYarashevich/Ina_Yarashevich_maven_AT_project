@@ -8,6 +8,7 @@ import org.junit.Test;
 import pages.booking.BookingHomepage;
 import pages.booking.BookingMainPage;
 import pages.booking.login.BookingSignInPage;
+import utils.CreatingTempMail;
 
 
 public class BookingLoginTest {
@@ -15,16 +16,18 @@ public class BookingLoginTest {
     BookingMainPage mainPage = new BookingMainPage();
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingHomepage homepage = new BookingHomepage();
+    CreatingTempMail tempMail = new CreatingTempMail();
 
     private static final Logger LOGGER =
             Logger.getLogger(BookingLoginTest.class.getName());
 
     @Test
     public void bookingLoginWithEmailPassword() {
+        Driver.getWebDriver().manage().window().maximize();
+        String email = tempMail.createTempMail("jane.doe2022@mail.ru");
         Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.clickSignIn();
-        signInPage.signIn("renee.brakus@trashmail.fr", "Automation2022!");
-        homepage.closeWelcomePopup();
+        signInPage.signIn("lemke.casimir@trashmail.fr", "Automation2022!");
         Assert.assertTrue("PROFILE_MENU element is not displayed on the page!",
                 homepage.getWebElement("PROFILE_MENU").isDisplayed());
         Assert.assertTrue("BOOKING_LOGO element is not displayed on the page!",

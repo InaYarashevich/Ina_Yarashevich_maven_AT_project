@@ -10,9 +10,7 @@ import java.util.List;
 public class MailRuInboxFolderPage {
     public WebDriver driver = Driver.getWebDriver();
     private static final String EMAILS_SUBJECTS_LIST_CSS = ".llc__subject>div>span";
-    private static final String UNREAD_EMAIL_CLASS_VALUE_CSS = ".llc__subject";
     private static final String CONFIRM_BUTTON_CSS = ".button-link_mr_css_attr";
-    private static final String EMAIL_XPATH = "//div[contains(.,'Hello')]/a[1]";
 
     public void openEmail(String subject) {
 

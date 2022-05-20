@@ -3,7 +3,6 @@ package tests;
 import driver.Driver;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import pages.booking.BookingAccountSettingsPage;
 import pages.booking.BookingHomepage;
@@ -30,17 +29,23 @@ public class BookingRegistrationTest extends BaseSteps {
     MailRuMainPage mailRuMainPage = new MailRuMainPage();
     MailRuInboxFolderPage mailRuInboxFolderPage = new MailRuInboxFolderPage();
 
+    @Before
+    public String createEmail() {
+        return tempMail.createTempMail("jane.doe2022@mail.ru");
+    }
+
     @Test
     public void registerWithEmailPassword() {
-        String email = tempMail.createTempMail("jane.doe2022@mail.ru");
         Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.startRegistration();
-        registrationPage.register(email, "Automation2022!");
+        registrationPage.register(createEmail(), "Automation2022!");
+        Driver.getWebDriver().get("https://mail.ru/");
         mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
         mailRuInboxFolderPage.openEmail("One more click to confirm your account");
         mailRuInboxFolderPage.confirmEmail();
+        Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.clickSignIn();
-        signInPage.signIn(email, "Automation2022!");
+        signInPage.signIn(createEmail(), "Automation2022!");
         homepage.getAccountSettingsPage();
         accountSettingsPage.getPersonalDetailsPage();
         Assert.assertTrue("The email is not verified!", personalDetailsPage.getEmailStatus().isDisplayed());
