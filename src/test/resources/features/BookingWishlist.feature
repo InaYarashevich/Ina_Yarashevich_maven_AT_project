@@ -3,7 +3,7 @@ Feature: Booking wishlist
   Scenario: Saving items to wishlist
     Given I open Booking main page
     When I click on Sign in button
-    And I sign in with "email" and "password"
+    And I sign in with "anthony.hermann@trashmail.fr" and "Automation2022!"
     And I fill "Madrid"  in the field
     And I select check in date
     And I select checkout date

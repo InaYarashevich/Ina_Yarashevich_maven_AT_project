@@ -14,7 +14,7 @@ public class MailRuInboxFolderPage {
     private static final String CONFIRM_BUTTON_CSS = ".button-link_mr_css_attr";
     private static final String EMAIL_XPATH = "//div[contains(.,'Hello')]/a[1]";
 
-    public void confirm(String subject) {
+    public void openEmail(String subject) {
 
         List<WebElement> elements = driver.findElements(By.cssSelector(EMAILS_SUBJECTS_LIST_CSS));
         for (int i = 0; i < elements.size(); i++) {
@@ -22,8 +22,10 @@ public class MailRuInboxFolderPage {
                     .getText().contains(subject)) {
                 elements.get(i).click();
             }
-
-            driver.findElement(By.cssSelector(CONFIRM_BUTTON_CSS)).click();
         }
+    }
+
+    public void confirmEmail() {
+        driver.findElement(By.cssSelector(CONFIRM_BUTTON_CSS)).click();
     }
 }

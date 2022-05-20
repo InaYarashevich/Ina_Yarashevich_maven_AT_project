@@ -30,9 +30,24 @@ public class RegistrationSteps extends BaseSteps {
         registrationPage.register(email, password);
     }
 
-    @And("I log in to mail.ru \\({string}, {string}) and confirm registration in {string} email")
-    public void iLogInToMailRuAndConfirmRegistrationInEmail(String accountName, String password, String emailSubject) {
-        mailConfirmation.confirmRegistration(accountName, password, emailSubject);
+    @And("I open mail.ru")
+    public void iOpenMailRu() {
+        Driver.getWebDriver().get("https://mail.ru/");
+    }
+
+    @And("I log in with {string}, {string}")
+    public void iLogWith(String email, String password) {
+        mailRuMainPage.loginMailRu(email, password);
+    }
+
+    @And("I open email with {string} subject")
+    public void iOpenEmailWithSubject(String subject) {
+        mailRuInboxFolderPage.openEmail(subject);
+    }
+
+    @And("I confirm registration on Booking")
+    public void iConfirmRegistrationOnBooking() {
+        mailRuInboxFolderPage.confirmEmail();
     }
 
     @And("I login with confirmed {string} and {string}")
@@ -54,10 +69,5 @@ public class RegistrationSteps extends BaseSteps {
     @Then("I see Verified label near the email")
     public void iSeeVerifiedLabelNearTheEmail() {
         Assert.assertTrue("Email is not verified.", personalDetailsPage.getEmailStatus().isDisplayed());
-    }
-
-    @After
-    public void after() {
-        Driver.destroy();
     }
 }

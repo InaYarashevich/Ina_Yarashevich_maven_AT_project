@@ -10,7 +10,7 @@ public class Driver {
 
     public static WebDriver getWebDriver() {
         if (driver == null) {
-            driver = DriverManager.getDriver(Config.FIREFOX);
+            driver = DriverManager.getDriver(Config.EDGE);
         }
         setTimeouts(30);
         return driver;
