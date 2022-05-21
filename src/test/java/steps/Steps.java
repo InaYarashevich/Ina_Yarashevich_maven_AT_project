@@ -42,7 +42,7 @@ public class Steps extends BaseSteps{
 
     @And("I filter the list of the found hotels by the max price per night")
     public void iFilterTheListOfTheFoundHotelsByTheMaxPricePerNight() {
-        resultPage.filterResults();
+        resultPage.filterResultsByMaxPrice();
     }
 
     @And("I sort the list of the results by the lowest price")

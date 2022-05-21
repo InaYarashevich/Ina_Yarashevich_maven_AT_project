@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: runners.JUnit4Runner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 96.343 s <<< FAILURE! - in runners.JUnit4Runner
+registerWithEmailPassword on registerWithEmailPassword(tests.BookingRegistrationTest)(tests.BookingRegistrationTest)  Time elapsed: 38.521 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: #fe-dea
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '172.18.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db
+*** Element info: {Using=css selector, value=#fe-dea}
+	at tests.BookingRegistrationTest.createEmail(BookingRegistrationTest.java:40)
+
+verifyEmailIsConfirmed on verifyEmailIsConfirmed(tests.BookingRegistrationTest)(tests.BookingRegistrationTest)  Time elapsed: 57.419 s  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+Browsing context has been discarded
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '172.18.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db
+	at tests.BookingRegistrationTest.verifyEmailIsConfirmed(BookingRegistrationTest.java:66)
+

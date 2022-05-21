@@ -18,7 +18,7 @@ public class BookingHomepage extends BookingBasePage {
     private static final String HEADER_NAVIGATION_CSS = "header .bui-tab__nav";
     private static final String WELCOME_POPUP_CLOSE_BUTTON_CSS = ".modal-mask-closeBtn";
     private static final String MANAGE_ACCOUNT_XPATH = "//span[contains(text(),'Manage account')]";
-    private static final String SEARCH_INPUT_FIELD_CSS = "#ss";
+    public static final String SEARCH_INPUT_FIELD_CSS = "#ss";
 
     public void setCheckInDate(){
         driver.findElement(By.xpath(CHECKIN_DATE_XPATH))

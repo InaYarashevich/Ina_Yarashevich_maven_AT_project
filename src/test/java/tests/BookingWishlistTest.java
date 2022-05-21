@@ -36,7 +36,6 @@ public class BookingWishlistTest extends BookingBasePage {
         LOGGER.info("Switching to Sign in page");
         signInPage.signIn("oreilly.kennedy@trashmail.fr", "Automation2022!");
         LOGGER.info("Logged in to account with valid email and password");
-        //homepage.closeWelcomePopup();
         homepage.searchCity("Madrid");
         LOGGER.info("The destination city is selected");
         homepage.setCheckInDate();

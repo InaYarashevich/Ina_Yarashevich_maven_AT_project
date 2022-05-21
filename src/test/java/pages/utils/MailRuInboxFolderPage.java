@@ -2,6 +2,7 @@ package pages.utils;
 
 import driver.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -22,7 +23,7 @@ public class MailRuInboxFolderPage {
                 elements.get(i).click();
                 break;
             }
-        }} catch (Exception exception){
+        }} catch (StaleElementReferenceException staleElementReferenceException){
             System.out.printf(String.format("Email with <%s> subject isn't found", subject));
         }
     }

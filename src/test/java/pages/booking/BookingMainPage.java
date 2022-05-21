@@ -8,6 +8,8 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
+import static pages.booking.BookingHomepage.SEARCH_INPUT_FIELD_CSS;
+
 public class BookingMainPage extends BookingBasePage {
 
     private static LocalDate currentDate = LocalDate.now();
@@ -18,7 +20,6 @@ public class BookingMainPage extends BookingBasePage {
     private static String expectedCurrencyTooltipText = "Choose your currency";
     private static String expectedLanguageTooltipText = "Choose your language";
 
-    private static final String CITY_SEARCH_FIELD_XPATH = "//input[@type='search']";
     static final String LISTBOX_XPATH = "//ul[@role='listbox']/li[1]";
     public static final String SEARCH_BUTTON_CSS = ".sb-searchbox__button";
     public static final String CHECKIN_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkInDate, currentMonth);
@@ -32,7 +33,7 @@ public class BookingMainPage extends BookingBasePage {
     private static final String SIGNIN_BUTTON_XPATH = "//nav[@class='bui-header__bar']//*[contains(text(),'Sign in')]/..";
 
     public void searchCity(String cityName) {
-        WebElement city = driver.findElement(By.xpath(CITY_SEARCH_FIELD_XPATH));
+        WebElement city = driver.findElement(By.cssSelector(SEARCH_INPUT_FIELD_CSS));
         city.clear();
         city.sendKeys(cityName);
     }

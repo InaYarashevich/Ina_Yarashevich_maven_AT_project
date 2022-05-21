@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="classwork.day19.suites.cucumber.FakeRunner2" time="23.814" tests="0" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.JUnit4Runner" time="96.343" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -55,4 +55,94 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
+  <testcase name="registerWithEmailPassword on registerWithEmailPassword(tests.BookingRegistrationTest)" classname="tests.BookingRegistrationTest" time="38.521">
+    <failure message="Unable to locate element: #fe-dea&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;ITEXUS-0066&apos;, ip: &apos;172.18.224.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db&#10;*** Element info: {Using=css selector, value=#fe-dea}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: #fe-dea
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '172.18.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db
+*** Element info: {Using=css selector, value=#fe-dea}
+	at tests.BookingRegistrationTest.createEmail(BookingRegistrationTest.java:40)
+</failure>
+    <system-out><![CDATA[2022-05-21 19:56:12 INFO  BookingRegistrationTest:37 - #Starting the test#
+]]></system-out>
+    <system-err><![CDATA[1653152167190	geckodriver	INFO	Listening on 127.0.0.1:42707
+1653152167733	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\IT0054\\AppData\\Local\\Temp\\rust_mozprofileGfL0Hz"
+1653152168581	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\IT0054\\AppData\\Local\\Temp\\rust_mozprofileGfL0Hz\\search.json.mozlz4", (void 0)))
+1653152172230	Marionette	INFO	Listening on port 63499
+Read port: 63499
+1653152172291	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+May 21, 2022 7:56:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+]]></system-err>
+  </testcase>
+  <testcase name="verifyEmailIsConfirmed on verifyEmailIsConfirmed(tests.BookingRegistrationTest)" classname="tests.BookingRegistrationTest" time="57.419">
+    <failure message="Browsing context has been discarded&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;ITEXUS-0066&apos;, ip: &apos;172.18.224.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+Browsing context has been discarded
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '172.18.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db
+	at tests.BookingRegistrationTest.verifyEmailIsConfirmed(BookingRegistrationTest.java:66)
+</failure>
+    <system-out><![CDATA[2022-05-21 19:56:45 INFO  BookingRegistrationTest:37 - #Starting the test#
+2022-05-21 19:56:48 INFO  BookingRegistrationTest:41 - Temporary email is created on Trashmail.
+2022-05-21 19:56:53 INFO  BookingRegistrationTest:58 - MAIL.RU main page is opened.
+2022-05-21 19:57:02 INFO  BookingRegistrationTest:60 - Logged in with valid email, password into MAIL.RU account.
+2022-05-21 19:57:33 INFO  BookingRegistrationTest:62 - Opened email from Booking to confirm registration.
+2022-05-21 19:57:42 INFO  BookingRegistrationTest:64 - Confirm button is clicked.
+]]></system-out>
+    <system-err><![CDATA[1653152207283	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 13: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653152214316	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://account.mail.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://account.mail.ru"
+1653152222024	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://account.mail.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1653152223722	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1653152252838	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1653152262665	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+]]></system-err>
+  </testcase>
 </testsuite>

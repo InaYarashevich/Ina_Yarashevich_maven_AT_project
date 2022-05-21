@@ -21,7 +21,7 @@ public class DriverManager {
             case FIREFOX -> getFirefoxDriver();
             case EDGE -> getEdgeDriver();
             case REMOTE -> getChromeDriver();
-            default -> throw null;
+            default -> null;
         };
     }
 

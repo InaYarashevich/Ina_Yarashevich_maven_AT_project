@@ -9,6 +9,9 @@ import org.junit.Test;
 import pages.booking.BookingHomepage;
 import pages.booking.BookingMainPage;
 import pages.booking.login.BookingSignInPage;
+import pages.booking.registration.BookingRegistrationPage;
+import pages.utils.MailRuInboxFolderPage;
+import pages.utils.MailRuMainPage;
 import utils.CreatingTempMail;
 
 
@@ -18,6 +21,10 @@ public class BookingLoginTest {
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingHomepage homepage = new BookingHomepage();
     CreatingTempMail tempMail = new CreatingTempMail();
+    BookingRegistrationPage registrationPage = new BookingRegistrationPage();
+    MailRuMainPage mailRuMainPage = new MailRuMainPage();
+    MailRuInboxFolderPage mailRuInboxFolderPage = new MailRuInboxFolderPage();
+
 
     private static final Logger LOGGER =
             Logger.getLogger(BookingLoginTest.class.getName());
@@ -25,15 +32,32 @@ public class BookingLoginTest {
     @Before
     public void startTest(){
         LOGGER.info("#Starting the test#");
+        Driver.getWebDriver().manage().window().maximize();
+        Driver.getWebDriver().get("https://trashmail.com/?lang=en");
+        tempMail.setTempEmail(tempMail.createTempMail("ina.yarashevich@gmail.com"));
+        LOGGER.info("Temporary email is created on Trashmail.");
+        Driver.getWebDriver().get("https://www.booking.com/");
+        LOGGER.info("Booking.com main page is opened.");
+        mainPage.startRegistration();
+        LOGGER.info("Registration is initiated.");
+        registrationPage.register(tempMail.getTempEmail(), "Automation2022!");
+        LOGGER.info("Valid email and password are submitted.");
+        Driver.getWebDriver().get("https://mail.ru/");
+        LOGGER.info("MAIL.RU main page is opened.");
+        mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
+        LOGGER.info("Logged in with valid email, password into MAIL.RU account.");
+        mailRuInboxFolderPage.openEmail("One click to confirm");
+        LOGGER.info("Opened email from Booking to confirm registration.");
+        mailRuInboxFolderPage.confirmEmail();
+        LOGGER.info("Confirm button is clicked.");
+        Driver.getWebDriver().close();
     }
 
     @Test
     public void bookingLoginWithEmailPassword() {
-        Driver.getWebDriver().manage().window().maximize();
-        String email = tempMail.createTempMail("jane.doe2022@mail.ru");
         Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.clickSignIn();
-        signInPage.signIn(email, "Automation2022!");
+        signInPage.signIn(tempMail.getTempEmail(), "Automation2022!");
         Assert.assertTrue("PROFILE_MENU element is not displayed on the page!",
                 homepage.getWebElement("PROFILE_MENU").isDisplayed());
         Assert.assertTrue("BOOKING_LOGO element is not displayed on the page!",

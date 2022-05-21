@@ -1,5 +1,6 @@
 package tests;
 
+import driver.Config;
 import driver.Driver;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -34,8 +35,8 @@ public class BookingRegistrationTest extends BaseSteps {
     @Before
     public void createEmail() {
         LOGGER.info("#Starting the test#");
+        Driver.getWebDriver().manage().window().maximize();
         Driver.getWebDriver().get("https://trashmail.com/?lang=en");
-        LOGGER.info("Trashmail main page is opened.");
         tempMail.setTempEmail(tempMail.createTempMail("ina.yarashevich@gmail.com"));
         LOGGER.info("Temporary email is created on Trashmail.");
     }
@@ -61,6 +62,7 @@ public class BookingRegistrationTest extends BaseSteps {
         LOGGER.info("Opened email from Booking to confirm registration.");
         mailRuInboxFolderPage.confirmEmail();
         LOGGER.info("Confirm button is clicked.");
+        Driver.getWebDriver().close();
         Driver.getWebDriver().get("https://www.booking.com/");
         LOGGER.info("Booking.com main page is opened.");
         mainPage.clickSignIn();
