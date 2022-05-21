@@ -7,10 +7,15 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
     private static WebDriver driver;
+    private static Config config;
+
+    public static void setConfig(Config theConfig) {
+        config = theConfig;
+    }
 
     public static WebDriver getWebDriver() {
         if (driver == null) {
-            driver = DriverManager.getDriver(Config.CHROME);
+            driver = DriverManager.getDriver(config);
         }
         setTimeouts(30);
         return driver;
