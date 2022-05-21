@@ -1,6 +1,9 @@
 package tests;
 
+import org.apache.log4j.Logger;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import pages.booking.BookingHomepage;
 import pages.booking.BookingMainPage;
@@ -16,22 +19,43 @@ public class BookingWishlistTest extends BookingBasePage {
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
     BookingWishlistPage wishlistPage = new BookingWishlistPage();
+    private static final Logger LOGGER =
+            Logger.getLogger(BookingWishlistTest.class.getName());
+
+    @Before
+    public void startTest(){
+        LOGGER.info("#Starting the test#");
+    }
 
     @Test
     public void getWishlistItemsTest() {
 
         driver.get("https://www.booking.com/");
+        LOGGER.info("Switching to Sign in page");
         mainPage.clickSignIn();
+        LOGGER.info("Switching to Sign in page");
         signInPage.signIn("oreilly.kennedy@trashmail.fr", "Automation2022!");
+        LOGGER.info("Logged in to account with valid email and password");
         //homepage.closeWelcomePopup();
         homepage.searchCity("Madrid");
-        mainPage.selectCheckInDate();
-        mainPage.selectCheckoutDate();
-        mainPage.search();
+        LOGGER.info("The destination city is selected");
+        homepage.setCheckInDate();
+        LOGGER.info("Check in date is selected");
+        homepage.setCheckoutDate();
+        LOGGER.info("Check out date is selected");
+        homepage.clickSearch();
+        LOGGER.info("Start searching hotels");
         searchResultPage.addToWishlist(0);
+        LOGGER.info("Saving the first hotel to wishlist");
         searchResultPage.addToWishlist(24);
+        LOGGER.info("Saving last from the list hotel to wishlist");
         searchResultPage.navigateToWishlist();
+        LOGGER.info("Navigating to wishlist");
         Assert.assertTrue("The title of the hotel saved in wishlist is different!",
                 wishlistPage.getSavedHotelTitle(0).equalsIgnoreCase(searchResultPage.getHotelTitle(0)));
+    }
+    @After
+    public void endTest(){
+        LOGGER.info("The test is finished.");
     }
 }

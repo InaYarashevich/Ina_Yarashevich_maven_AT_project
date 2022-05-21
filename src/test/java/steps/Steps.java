@@ -37,7 +37,7 @@ public class Steps extends BaseSteps{
 
     @And("I click on the Search button")
     public void iClickOnTheSearchButton() {
-        mainPage.search();
+        mainPage.clickSearch();
     }
 
     @And("I filter the list of the found hotels by the max price per night")

@@ -1,4 +1,41 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.125 s - in TestSuite
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 151.85 s <<< FAILURE! - in TestSuite
+bookingLoginWithEmailPassword on bookingLoginWithEmailPassword(tests.BookingLoginTest)(tests.BookingLoginTest)  Time elapsed: 40.811 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#fe-dea"}
+  (Session info: MicrosoftEdge=101.0.1210.53)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 101.0.1210.53, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58308}, msedge: {msedgedriverVersion: 101.0.1210.47 (f5323bd54bb6..., userDataDir: C:\Users\IT0054\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: eaac145f396c309ecebc31cae11f763f
+*** Element info: {Using=css selector, value=#fe-dea}
+	at tests.BookingLoginTest.bookingLoginWithEmailPassword(BookingLoginTest.java:33)
+
+registerWithEmailPassword on registerWithEmailPassword(tests.BookingRegistrationTest)(tests.BookingRegistrationTest)  Time elapsed: 37.613 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: MicrosoftEdge=101.0.1210.53)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 101.0.1210.53, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58385}, msedge: {msedgedriverVersion: 101.0.1210.47 (f5323bd54bb6..., userDataDir: C:\Users\IT0054\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7364b7cd2d1bd864e90a69e163b682cd
+	at tests.BookingRegistrationTest.startTest(BookingRegistrationTest.java:39)
+
+getWishlistItemsTest on getWishlistItemsTest(tests.BookingWishlistTest)(tests.BookingWishlistTest)  Time elapsed: 40.613 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#ss"}
+  (Session info: MicrosoftEdge=101.0.1210.53)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ITEXUS-0066', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 101.0.1210.53, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58385}, msedge: {msedgedriverVersion: 101.0.1210.47 (f5323bd54bb6..., userDataDir: C:\Users\IT0054\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7364b7cd2d1bd864e90a69e163b682cd
+*** Element info: {Using=css selector, value=#ss}
+	at tests.BookingWishlistTest.getWishlistItemsTest(BookingWishlistTest.java:40)
+

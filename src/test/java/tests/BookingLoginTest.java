@@ -4,6 +4,7 @@ import driver.Driver;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import pages.booking.BookingHomepage;
 import pages.booking.BookingMainPage;
@@ -20,6 +21,11 @@ public class BookingLoginTest {
 
     private static final Logger LOGGER =
             Logger.getLogger(BookingLoginTest.class.getName());
+
+    @Before
+    public void startTest(){
+        LOGGER.info("#Starting the test#");
+    }
 
     @Test
     public void bookingLoginWithEmailPassword() {

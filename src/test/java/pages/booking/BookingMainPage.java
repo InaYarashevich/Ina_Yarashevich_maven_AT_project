@@ -19,10 +19,10 @@ public class BookingMainPage extends BookingBasePage {
     private static String expectedLanguageTooltipText = "Choose your language";
 
     private static final String CITY_SEARCH_FIELD_XPATH = "//input[@type='search']";
-    private static final String LISTBOX_XPATH = "//ul[@role='listbox']/li[1]";
-    private static final String SEARCH_BUTTON_XPATH = "//button[@class='sb-searchbox__button ']";
-    private static final String CHECKIN_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkInDate, currentMonth);
-    private static final String CHECKOUT_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkOutDate, currentMonth);
+    static final String LISTBOX_XPATH = "//ul[@role='listbox']/li[1]";
+    public static final String SEARCH_BUTTON_CSS = ".sb-searchbox__button";
+    public static final String CHECKIN_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkInDate, currentMonth);
+    public static final String CHECKOUT_DATE_XPATH = String.format("//span[@aria-label='%s %s 2022']", checkOutDate, currentMonth);
     private static final String NUMBER_OF_ADULTS_DROPDOWN_XPATH = "//span[contains(text(),'2 adults')]";
     private static final String INCREASE_NUMBER_OF_ADULTS_XPATH = "//span[text()='+']/parent::*[@aria-label='Increase number of Adults']";
     private static final String INCREASE_NUMBER_OF_ROOMS_XPATH = "//span[text()='+']/parent::button[@aria-label='Increase number of Rooms']";
@@ -62,8 +62,8 @@ public class BookingMainPage extends BookingBasePage {
                 .click();
     }
 
-    public void search() {
-        driver.findElement(By.xpath(SEARCH_BUTTON_XPATH)).click();
+    public void clickSearch() {
+        driver.findElement(By.cssSelector(SEARCH_BUTTON_CSS)).click();
     }
 
     public String getCurrencyTooltipText() {

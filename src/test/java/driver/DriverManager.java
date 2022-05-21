@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+
 public class DriverManager {
 
     public static WebDriver getDriver(Config config) {
@@ -28,11 +29,13 @@ public class DriverManager {
     private static WebDriver getFirefoxDriver() {
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("start-maximized");
-        return new FirefoxDriver();
+        return new FirefoxDriver(options);
     }
 
     private static WebDriver getEdgeDriver() {
         System.setProperty("webdriver.edge.driver", "D:/webdrivers/msedgedriver.exe");
-        return new EdgeDriver();
+        EdgeOptions options = new EdgeOptions();
+        options.setCapability("start-maximized", true);
+        return new EdgeDriver(options);
     }
 }

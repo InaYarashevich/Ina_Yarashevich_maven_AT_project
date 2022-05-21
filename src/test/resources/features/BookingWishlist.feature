@@ -1,6 +1,7 @@
 Feature: Booking wishlist
 
   Scenario: Saving items to wishlist
+    Given I register temporary email using my mail.ru "jane.doe2022@mail.ru" account
     Given I open Booking main page
     When I click on Sign in button
     And I sign in with "anthony.hermann@trashmail.fr" and "Automation2022!"

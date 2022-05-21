@@ -1,23 +1,13 @@
 package pages.booking;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import pages.booking.base.BookingBasePage;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Date;
-
-import static pages.booking.BookingMainPage.CURRENCY_XPATH;
-import static pages.booking.BookingMainPage.LANGUAGE_XPATH;
+import static pages.booking.BookingMainPage.*;
 
 public class BookingHomepage extends BookingBasePage {
-
-    private static LocalDate currentDate = LocalDate.now();
-    private static int currentDay = currentDate.getDayOfMonth();
-    private static String currentMonth = new SimpleDateFormat("MMMM").format(new Date());
-    private static int checkInDate = currentDay + 3;
-    private static int checkOutDate = checkInDate + 7;
 
     private static final String ONBOARDING_MODAL_CSS = "#genius-onboarding-title";
     private static final String BOOKING_LOGO_CSS = ".bui-header__logo";
@@ -30,10 +20,25 @@ public class BookingHomepage extends BookingBasePage {
     private static final String MANAGE_ACCOUNT_XPATH = "//span[contains(text(),'Manage account')]";
     private static final String SEARCH_INPUT_FIELD_CSS = "#ss";
 
+    public void setCheckInDate(){
+        driver.findElement(By.xpath(CHECKIN_DATE_XPATH))
+                .click();
+    }
+
+    public void setCheckoutDate(){
+        driver.findElement(By.xpath(CHECKOUT_DATE_XPATH))
+                .click();
+    }
+
+    public void clickSearch(){
+        driver.findElement(By.cssSelector(SEARCH_BUTTON_CSS)).click();
+    }
+
     public void searchCity(String cityName) {
         WebElement city = driver.findElement(By.cssSelector(SEARCH_INPUT_FIELD_CSS));
         city.clear();
         city.sendKeys(cityName);
+        driver.findElement(By.xpath(LISTBOX_XPATH)).click();
     }
 
     public void getAccountSettingsPage() {

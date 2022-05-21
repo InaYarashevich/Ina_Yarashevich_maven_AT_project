@@ -15,11 +15,14 @@ public class MailRuInboxFolderPage {
     public void openEmail(String subject) {
 
         List<WebElement> elements = driver.findElements(By.cssSelector(EMAILS_SUBJECTS_LIST_CSS));
+        try{
         for (int i = 0; i < elements.size(); i++) {
             if (elements.get(i)
                     .getText().contains(subject)) {
                 elements.get(i).click();
             }
+        }} catch (Exception exception){
+            System.out.printf(String.format("Email with <%s> subject isn't found", subject));
         }
     }
 
