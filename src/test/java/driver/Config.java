@@ -2,7 +2,8 @@ package driver;
 
 public enum Config {
 
-    CHROME(),
-    FIREFOX(),
-    EDGE()
+    CHROME,
+    FIREFOX,
+    EDGE,
+    REMOTE
 }

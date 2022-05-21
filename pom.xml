@@ -23,8 +23,9 @@
                     <includes>
                         <include>**/FakeRunner.java</include>
                         <include>**/FakeRunner2.java</include>
-                        <include>**/JUnit4Runner.java</include>
                     </includes>
+                    <forkCount>2</forkCount>
+                    <reuseForks>true</reuseForks>
                 </configuration>
             </plugin>
         </plugins>

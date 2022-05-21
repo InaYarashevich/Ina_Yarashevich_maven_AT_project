@@ -7,6 +7,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 
 public class DriverManager {
@@ -16,8 +20,16 @@ public class DriverManager {
             case CHROME -> getChromeDriver();
             case FIREFOX -> getFirefoxDriver();
             case EDGE -> getEdgeDriver();
+            case REMOTE -> getChromeDriver();
             default -> throw null;
         };
+    }
+
+    private static WebDriver getRemoteDriver() throws MalformedURLException {
+        ChromeOptions options = new ChromeOptions();
+        RemoteWebDriver webDriver =
+                new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        return webDriver;
     }
 
     private static WebDriver getChromeDriver() {
@@ -28,7 +40,6 @@ public class DriverManager {
 
     private static WebDriver getFirefoxDriver() {
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("start-maximized");
         return new FirefoxDriver(options);
     }
 
@@ -38,4 +49,6 @@ public class DriverManager {
         options.setCapability("start-maximized", true);
         return new EdgeDriver(options);
     }
+
+
 }

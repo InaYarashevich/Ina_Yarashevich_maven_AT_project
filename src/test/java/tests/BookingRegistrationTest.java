@@ -13,7 +13,6 @@ import pages.booking.login.BookingSignInPage;
 import pages.booking.registration.BookingRegistrationPage;
 import pages.utils.MailRuInboxFolderPage;
 import pages.utils.MailRuMainPage;
-import pages.utils.TrashmailMainPage;
 import steps.BaseSteps;
 import utils.CreatingTempMail;
 
@@ -26,7 +25,6 @@ public class BookingRegistrationTest extends BaseSteps {
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
     BookingAccountSettingsPage accountSettingsPage = new BookingAccountSettingsPage();
-    TrashmailMainPage trashmailMainPage = new TrashmailMainPage();
     MailRuMainPage mailRuMainPage = new MailRuMainPage();
     MailRuInboxFolderPage mailRuInboxFolderPage = new MailRuInboxFolderPage();
 
