@@ -49,6 +49,4 @@ public class DriverManager {
         options.setCapability("start-maximized", true);
         return new EdgeDriver(options);
     }
-
-
 }
