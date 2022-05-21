@@ -40,14 +40,6 @@ public class BookingRegistrationTest extends BaseSteps {
         LOGGER.info("Trashmail main page is opened.");
         tempMail.setTempEmail(tempMail.createTempMail("ina.yarashevich@gmail.com"));
         LOGGER.info("Temporary email is created on Trashmail.");
-        Driver.getWebDriver().get("https://mail.ru/");
-        LOGGER.info("MAIL.RU main page is opened.");
-        mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
-        LOGGER.info("Logged in with valid email, password into MAIL.RU account.");
-        mailRuInboxFolderPage.openEmail("One click to confirm");
-        LOGGER.info("Opened email from Booking to confirm registration.");
-        mailRuInboxFolderPage.confirmEmail();
-        LOGGER.info("Confirm button is clicked.");
     }
 
     @Test
@@ -63,6 +55,14 @@ public class BookingRegistrationTest extends BaseSteps {
 
     @Test
     public void verifyEmailIsConfirmed() {
+        Driver.getWebDriver().get("https://mail.ru/");
+        LOGGER.info("MAIL.RU main page is opened.");
+        mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
+        LOGGER.info("Logged in with valid email, password into MAIL.RU account.");
+        mailRuInboxFolderPage.openEmail("One click to confirm");
+        LOGGER.info("Opened email from Booking to confirm registration.");
+        mailRuInboxFolderPage.confirmEmail();
+        LOGGER.info("Confirm button is clicked.");
         Driver.getWebDriver().get("https://www.booking.com/");
         LOGGER.info("Booking.com main page is opened.");
         mainPage.clickSignIn();
