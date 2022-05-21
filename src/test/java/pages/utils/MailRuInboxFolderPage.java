@@ -20,6 +20,7 @@ public class MailRuInboxFolderPage {
             if (elements.get(i)
                     .getText().contains(subject)) {
                 elements.get(i).click();
+                break;
             }
         }} catch (Exception exception){
             System.out.printf(String.format("Email with <%s> subject isn't found", subject));

@@ -36,7 +36,7 @@ public class BookingRegistrationTest extends BaseSteps {
     @Before
     public void startTest() {
         LOGGER.info("#Starting the test#");
-        tempMail.createTempMail("jane.doe2022@mail.ru");
+        tempMail.setTempEmail(tempMail.createTempMail("ina.yarashevich@gmail.com"));
         LOGGER.info("Temporary email is created on Trashmail.");
     }
 
@@ -44,14 +44,14 @@ public class BookingRegistrationTest extends BaseSteps {
     public void registerWithEmailPassword() {
         Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.startRegistration();
-        registrationPage.register("oreilly.kennedy@trashmail.fr", "Automation2022!");
+        registrationPage.register(tempMail.getTempEmail(), "Automation2022!");
         Driver.getWebDriver().get("https://mail.ru/");
         mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
         mailRuInboxFolderPage.openEmail("One more click to confirm your account");
         mailRuInboxFolderPage.confirmEmail();
-        Driver.getWebDriver().get("https://www.booking.com/");
+        Driver.getWebDriver().get("https://www.booking.com/"); //не переходит на букинг
         mainPage.clickSignIn();
-        signInPage.signIn("oreilly.kennedy@trashmail.fr", "Automation2022!");
+        signInPage.signIn(tempMail.getTempEmail(), "Automation2022!");
         homepage.getAccountSettingsPage();
         accountSettingsPage.getPersonalDetailsPage();
         Assert.assertTrue("The email is not verified!", personalDetailsPage.getEmailStatus().isDisplayed());

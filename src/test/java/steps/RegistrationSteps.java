@@ -1,7 +1,6 @@
 package steps;
 
 import driver.Driver;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,9 +24,9 @@ public class RegistrationSteps extends BaseSteps {
         mainPage.startRegistration();
     }
 
-    @And("I register with my {string} and {string} password")
-    public void iRegisterWithMyTemporaryEmailAndPassword(String email, String password) {
-        registrationPage.register(email, password);
+    @And("I register with my temporary email and {string} password")
+    public void iRegisterWithMyTemporaryEmailAndPassword(String password) {
+        registrationPage.register(creatingTempMail.getTempEmail(), password);
     }
 
     @And("I open mail.ru")
@@ -50,10 +49,9 @@ public class RegistrationSteps extends BaseSteps {
         mailRuInboxFolderPage.confirmEmail();
     }
 
-    @And("I login with confirmed {string} and {string}")
-    public void iLoginWithConfirmedAnd(String email, String password) {
-        mainPage.clickSignIn();
-        signInPage.signIn(email, password);
+    @And("I login with confirmed temporary email and {string} password")
+    public void iLoginWithConfirmedTemporaryEmailAndPassword(String password) {
+        signInPage.signIn(creatingTempMail.getTempEmail(), password);
     }
 
     @And("I open Account settings page")

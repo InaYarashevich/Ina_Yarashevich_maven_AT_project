@@ -11,6 +11,10 @@ public class CreatingTempMail {
         return tempEmail;
     }
 
+    public void setTempEmail(String tempEmail){
+        this.tempEmail = tempEmail;
+    }
+
     public String createTempMail(String realEmail) {
         return mainPage.getMail(realEmail);
     }
