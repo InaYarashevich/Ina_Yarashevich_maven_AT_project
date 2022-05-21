@@ -16,7 +16,6 @@ public class TrashmailMainPage {
     private static final String CREATED_EMAIL_CSS = "#fe-dea";
 
     public String getMail(String realEmail) {
-        driver.get("https://trashmail.com/?lang=en");
         WebElement emailInput = driver.findElement(By.cssSelector(REAL_EMAIL_CSS));
         emailInput.clear();
         emailInput.sendKeys(realEmail);
@@ -30,7 +29,6 @@ public class TrashmailMainPage {
                 .sendKeys(Keys.ENTER)
                 .build().perform();
         driver.findElement(By.cssSelector(SUBMIT_BUTTON_CSS)).click();
-
         return driver.findElement(By.cssSelector(CREATED_EMAIL_CSS)).getAttribute("value");
     }
 }

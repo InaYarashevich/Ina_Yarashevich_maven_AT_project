@@ -7,9 +7,8 @@ import tests.BookingRegistrationTest;
 import tests.BookingWishlistTest;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({BookingLoginTest.class,
-        BookingRegistrationTest.class,
-        BookingWishlistTest.class
+@Suite.SuiteClasses({
+        BookingRegistrationTest.class
 })
 
 public class JUnit4Runner {

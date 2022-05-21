@@ -34,26 +34,45 @@ public class BookingRegistrationTest extends BaseSteps {
             Logger.getLogger(BookingRegistrationTest.class.getName());
 
     @Before
-    public void startTest() {
+    public void createEmail() {
         LOGGER.info("#Starting the test#");
+        Driver.getWebDriver().get("https://trashmail.com/?lang=en");
+        LOGGER.info("Trashmail main page is opened.");
         tempMail.setTempEmail(tempMail.createTempMail("ina.yarashevich@gmail.com"));
         LOGGER.info("Temporary email is created on Trashmail.");
+        Driver.getWebDriver().get("https://mail.ru/");
+        LOGGER.info("MAIL.RU main page is opened.");
+        mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
+        LOGGER.info("Logged in with valid email, password into MAIL.RU account.");
+        mailRuInboxFolderPage.openEmail("One click to confirm");
+        LOGGER.info("Opened email from Booking to confirm registration.");
+        mailRuInboxFolderPage.confirmEmail();
+        LOGGER.info("Confirm button is clicked.");
     }
 
     @Test
     public void registerWithEmailPassword() {
         Driver.getWebDriver().get("https://www.booking.com/");
+        LOGGER.info("Booking.com main page is opened.");
         mainPage.startRegistration();
+        LOGGER.info("Registration is initiated.");
         registrationPage.register(tempMail.getTempEmail(), "Automation2022!");
-        Driver.getWebDriver().get("https://mail.ru/");
-        mailRuMainPage.loginMailRu("jane.doe2022@mail.ru", "Automation2022!");
-        mailRuInboxFolderPage.openEmail("One more click to confirm your account");
-        mailRuInboxFolderPage.confirmEmail();
-        Driver.getWebDriver().get("https://www.booking.com/"); //не переходит на букинг
+        LOGGER.info("Valid email and password are submitted.");
+        Assert.assertTrue("The Greeting message is displayed!", homepage.getGreeting().isDisplayed());
+    }
+
+    @Test
+    public void verifyEmailIsConfirmed() {
+        Driver.getWebDriver().get("https://www.booking.com/");
+        LOGGER.info("Booking.com main page is opened.");
         mainPage.clickSignIn();
+        LOGGER.info("Login is initiated.");
         signInPage.signIn(tempMail.getTempEmail(), "Automation2022!");
+        LOGGER.info("Valid email and password are submitted.");
         homepage.getAccountSettingsPage();
+        LOGGER.info("Homepage is opened.");
         accountSettingsPage.getPersonalDetailsPage();
+        LOGGER.info("Account Settings Page is opened.");
         Assert.assertTrue("The email is not verified!", personalDetailsPage.getEmailStatus().isDisplayed());
     }
 }

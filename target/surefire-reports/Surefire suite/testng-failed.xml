@@ -5,9 +5,8 @@
     <classes>
       <class name="org.junit.runner.Description">
         <methods>
+          <include name="verifyEmailIsConfirmed"/>
           <include name="registerWithEmailPassword"/>
-          <include name="getWishlistItemsTest"/>
-          <include name="bookingLoginWithEmailPassword"/>
         </methods>
       </class> <!-- org.junit.runner.Description -->
     </classes>
