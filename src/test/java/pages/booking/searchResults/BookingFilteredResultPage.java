@@ -1,4 +1,4 @@
-package pages.booking.results;
+package pages.booking.searchResults;
 
 import org.openqa.selenium.By;
 import pages.booking.base.BookingBasePage;

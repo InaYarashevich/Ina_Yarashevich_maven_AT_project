@@ -10,14 +10,14 @@ import pages.booking.BookingMainPage;
 import pages.booking.BookingWishlistPage;
 import pages.booking.base.BookingBasePage;
 import pages.booking.login.BookingSignInPage;
-import pages.booking.results.BookingSearchResultPage;
+import pages.booking.searchResults.BookingSearchResultPage;
 
 public class BookingWishlistTest extends BookingBasePage {
 
     BookingMainPage mainPage = new BookingMainPage();
     BookingHomepage homepage = new BookingHomepage();
     BookingSignInPage signInPage = new BookingSignInPage();
-    BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
+    BookingSearchResultPage searchResultPage = new BookingSearchResultPage(90);
     BookingWishlistPage wishlistPage = new BookingWishlistPage();
     private static final Logger LOGGER =
             Logger.getLogger(BookingWishlistTest.class.getName());

@@ -1,12 +1,12 @@
 package steps;
 
-import io.cucumber.java.it.Ma;
+
 import pages.booking.*;
 import pages.booking.login.BookingSignInPage;
 import pages.booking.registration.BookingRegistrationPage;
-import pages.booking.results.BookingFilteredResultPage;
-import pages.booking.results.BookingSearchResultPage;
-import pages.booking.results.BookingSortedResultPage;
+import pages.booking.searchResults.BookingFilteredResultPage;
+import pages.booking.searchResults.BookingSearchResultPage;
+import pages.booking.searchResults.BookingSortedResultPage;
 import pages.utils.MailRuInboxFolderPage;
 import pages.utils.MailRuMainPage;
 import utils.CreatingTempMail;
@@ -14,7 +14,7 @@ import utils.CreatingTempMail;
 public class BaseSteps {
 
     BookingMainPage mainPage = new BookingMainPage();
-    BookingSearchResultPage resultPage = new BookingSearchResultPage();
+    BookingSearchResultPage searchResultPage = new BookingSearchResultPage(90);
     BookingFilteredResultPage filteredResultPage = new BookingFilteredResultPage();
     BookingSortedResultPage sortedResultPage = new BookingSortedResultPage();
     BookingHomepage homepage = new BookingHomepage();
@@ -26,4 +26,5 @@ public class BaseSteps {
     CreatingTempMail creatingTempMail = new CreatingTempMail();
     BookingAccountSettingsPage accountSettingsPage = new BookingAccountSettingsPage();
     MailRuMainPage mailRuMainPage = new MailRuMainPage();
+
 }
