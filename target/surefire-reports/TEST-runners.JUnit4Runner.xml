@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.JUnit4Runner" time="96.343" tests="2" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.JUnit4Runner" time="0.117" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14\bin"/>
-    <property name="sun.java.command" value="C:\Users\IT0054\AppData\Local\Temp\surefire6095098036489353413\surefirebooter14740592735362937675.jar C:\Users\IT0054\AppData\Local\Temp\surefire6095098036489353413 2022-05-21T19-55-41_713-jvmRun1 surefire10048916996878227644tmp surefire_09118958861838575335tmp"/>
+    <property name="sun.java.command" value="C:\Users\IT0054\AppData\Local\Temp\surefire13536612025666019052\surefirebooter5290106083118841591.jar C:\Users\IT0054\AppData\Local\Temp\surefire13536612025666019052 2022-05-22T12-29-02_574-jvmRun1 surefire10757137063597160075tmp surefire_15892718182343071900tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\IT0054\Ina_Yarashevich_maven_AT_project\target\test-classes;C:\Users\IT0054\Ina_Yarashevich_maven_AT_project\target\classes;C:\Users\IT0054\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\IT0054\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\IT0054\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\IT0054\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\IT0054\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-server\3.141.59\selenium-server-3.141.59.jar;C:\Users\IT0054\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\IT0054\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\jetty-repacked\9.4.12.v20180830\jetty-repacked-9.4.12.v20180830.jar;C:\Users\IT0054\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\IT0054\.m2\repository\io\cucumber\cucumber-java\4.8.1\cucumber-java-4.8.1.jar;C:\Users\IT0054\.m2\repository\io\cucumber\cucumber-core\4.8.1\cucumber-core-4.8.1.jar;C:\Users\IT0054\.m2\repository\io\cucumber\gherkin\5.1.0\gherkin-5.1.0.jar;C:\Users\IT0054\.m2\repository\io\cucumber\tag-expressions\1.1.1\tag-expressions-1.1.1.jar;C:\Users\IT0054\.m2\repository\io\cucumber\cucumber-expressions\7.0.2\cucumber-expressions-7.0.2.jar;C:\Users\IT0054\.m2\repository\io\cucumber\datatable\1.1.14\datatable-1.1.14.jar;C:\Users\IT0054\.m2\repository\io\cucumber\datatable-dependencies\1.1.14\datatable-dependencies-1.1.14.jar;C:\Users\IT0054\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\IT0054\.m2\repository\io\cucumber\cucumber-junit\4.8.1\cucumber-junit-4.8.1.jar;C:\Users\IT0054\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\IT0054\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\IT0054\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\IT0054\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;C:\Users\IT0054\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\IT0054\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\IT0054\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\IT0054\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\IT0054\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\IT0054\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\IT0054\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\IT0054\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\IT0054\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\IT0054\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\IT0054\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\IT0054\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\IT0054\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\IT0054\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\IT0054\AppData\Local\Temp\surefire6095098036489353413\surefirebooter14740592735362937675.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\IT0054\AppData\Local\Temp\surefire13536612025666019052\surefirebooter5290106083118841591.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14+36-1461"/>
@@ -55,94 +55,4 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="registerWithEmailPassword on registerWithEmailPassword(tests.BookingRegistrationTest)" classname="tests.BookingRegistrationTest" time="38.521">
-    <failure message="Unable to locate element: #fe-dea&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;ITEXUS-0066&apos;, ip: &apos;172.18.224.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db&#10;*** Element info: {Using=css selector, value=#fe-dea}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: #fe-dea
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ITEXUS-0066', ip: '172.18.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db
-*** Element info: {Using=css selector, value=#fe-dea}
-	at tests.BookingRegistrationTest.createEmail(BookingRegistrationTest.java:40)
-</failure>
-    <system-out><![CDATA[2022-05-21 19:56:12 INFO  BookingRegistrationTest:37 - #Starting the test#
-]]></system-out>
-    <system-err><![CDATA[1653152167190	geckodriver	INFO	Listening on 127.0.0.1:42707
-1653152167733	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\IT0054\\AppData\\Local\\Temp\\rust_mozprofileGfL0Hz"
-1653152168581	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\IT0054\\AppData\\Local\\Temp\\rust_mozprofileGfL0Hz\\search.json.mozlz4", (void 0)))
-1653152172230	Marionette	INFO	Listening on port 63499
-Read port: 63499
-1653152172291	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-May 21, 2022 7:56:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-]]></system-err>
-  </testcase>
-  <testcase name="verifyEmailIsConfirmed on verifyEmailIsConfirmed(tests.BookingRegistrationTest)" classname="tests.BookingRegistrationTest" time="57.419">
-    <failure message="Browsing context has been discarded&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;ITEXUS-0066&apos;, ip: &apos;172.18.224.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
-Browsing context has been discarded
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ITEXUS-0066', ip: '172.18.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 100.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220513165813, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13040, moz:profile: C:\Users\IT0054\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 67e529f7-bc1c-4c0b-8478-b7dcdc1286db
-	at tests.BookingRegistrationTest.verifyEmailIsConfirmed(BookingRegistrationTest.java:66)
-</failure>
-    <system-out><![CDATA[2022-05-21 19:56:45 INFO  BookingRegistrationTest:37 - #Starting the test#
-2022-05-21 19:56:48 INFO  BookingRegistrationTest:41 - Temporary email is created on Trashmail.
-2022-05-21 19:56:53 INFO  BookingRegistrationTest:58 - MAIL.RU main page is opened.
-2022-05-21 19:57:02 INFO  BookingRegistrationTest:60 - Logged in with valid email, password into MAIL.RU account.
-2022-05-21 19:57:33 INFO  BookingRegistrationTest:62 - Opened email from Booking to confirm registration.
-2022-05-21 19:57:42 INFO  BookingRegistrationTest:64 - Confirm button is clicked.
-]]></system-out>
-    <system-err><![CDATA[1653152207283	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://trashmail.com"
-JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 13: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
-1653152214316	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://account.mail.ru"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://account.mail.ru"
-1653152222024	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://account.mail.ru"
-JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-1653152223722	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
-1653152252838	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-1653152262665	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-]]></system-err>
-  </testcase>
 </testsuite>

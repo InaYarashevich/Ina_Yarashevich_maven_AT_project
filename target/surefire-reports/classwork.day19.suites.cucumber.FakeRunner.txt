@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: classwork.day19.suites.cucumber.FakeRunner
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.027 s - in classwork.day19.suites.cucumber.FakeRunner
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.312 s - in classwork.day19.suites.cucumber.FakeRunner

@@ -1,5 +1,7 @@
 package tests;
 
+import driver.Config;
+import driver.Driver;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
@@ -25,6 +27,7 @@ public class BookingWishlistTest extends BookingBasePage {
     @Before
     public void startTest(){
         LOGGER.info("#Starting the test#");
+        Driver.setConfig(Config.CHROME);
     }
 
     @Test

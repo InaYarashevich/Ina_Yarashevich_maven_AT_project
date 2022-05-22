@@ -1,6 +1,5 @@
 package pages.booking.base;
 
-import driver.Config;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
