@@ -1,7 +1,7 @@
 package pages.booking;
 
-import classwork.day19.pages.BookingBasePage;
 import org.openqa.selenium.By;
+import pages.booking.base.BookingBasePage;
 
 public class BookingAccountSettingsPage extends BookingBasePage {
 

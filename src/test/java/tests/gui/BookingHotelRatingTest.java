@@ -1,4 +1,4 @@
-package tests;
+package tests.gui;
 
 import driver.Config;
 import driver.Driver;
@@ -22,6 +22,7 @@ public class BookingHotelRatingTest extends BookingBasePage {
     @Before
     public void startTest() {
         LOGGER.info("#Starting the test#");
+        Driver.setConfig(Config.CHROME);
         Driver.getWebDriver().manage().window().maximize();
     }
 

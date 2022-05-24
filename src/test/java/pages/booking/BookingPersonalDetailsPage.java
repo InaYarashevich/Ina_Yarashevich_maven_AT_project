@@ -1,8 +1,8 @@
 package pages.booking;
 
-import classwork.day19.pages.BookingBasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.booking.base.BookingBasePage;
 
 public class BookingPersonalDetailsPage extends BookingBasePage {
 

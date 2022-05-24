@@ -8,7 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import tests.BookingHotelRatingTest;
+import tests.gui.BookingHotelRatingTest;
 
 public class SearchResultsSteps extends BaseSteps{
 

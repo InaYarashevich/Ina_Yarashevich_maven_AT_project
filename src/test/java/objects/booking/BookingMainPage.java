@@ -1,4 +1,4 @@
-package objects;
+package objects.booking;
 
 public class BookingMainPage {
 }

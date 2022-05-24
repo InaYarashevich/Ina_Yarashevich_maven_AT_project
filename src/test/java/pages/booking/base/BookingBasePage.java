@@ -1,6 +1,5 @@
 package pages.booking.base;
 
-import driver.Config;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 public abstract class BookingBasePage {
     private static final String LOADER_XPATH = "//div[@data-testid='overlay-spinner']";
 
-    WebDriver driver = Driver.getWebDriver();
+    public WebDriver driver = Driver.getWebDriver();
+    
 
     public void waitsForLoader() {
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
