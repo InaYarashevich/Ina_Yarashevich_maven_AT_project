@@ -18,10 +18,10 @@ public class BookingHotelRatingTest extends BookingBasePage {
     BookingSearchResultPage searchResultPage = new BookingSearchResultPage(90);
     private static final Logger LOGGER =
             Logger.getLogger(BookingHotelRatingTest.class.getName());
+
     @Before
     public void startTest() {
         LOGGER.info("#Starting the test#");
-        Driver.setConfig(Config.CHROME);
         Driver.getWebDriver().manage().window().maximize();
     }
 

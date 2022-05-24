@@ -12,9 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
 public class DriverManager {
-
     public static WebDriver getDriver(Config config) {
         return switch (config) {
             case CHROME -> getChromeDriver();
@@ -24,25 +22,21 @@ public class DriverManager {
             default -> null;
         };
     }
-
     private static WebDriver getRemoteDriver() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
         RemoteWebDriver webDriver =
                 new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
         return webDriver;
     }
-
     private static WebDriver getChromeDriver() {
         ChromeOptions caps = new ChromeOptions();
         caps.addArguments("start-maximized");
         return new ChromeDriver(caps);
     }
-
     private static WebDriver getFirefoxDriver() {
         FirefoxOptions options = new FirefoxOptions();
         return new FirefoxDriver(options);
     }
-
     private static WebDriver getEdgeDriver() {
         System.setProperty("webdriver.edge.driver", "D:/webdrivers/msedgedriver.exe");
         EdgeOptions options = new EdgeOptions();

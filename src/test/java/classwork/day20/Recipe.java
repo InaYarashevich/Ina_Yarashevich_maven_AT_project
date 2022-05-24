@@ -1,14 +1,14 @@
 package classwork.day20;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Recipe {
 
-    public String recipename;
-    public Ingredient[] ingredlist;
-    public int preptime;
+    private String recipename;
+    private List<Ingredient> ingredlist;
+    private int preptime;
 
-    public Recipe(String recipename, Ingredient[] ingredlist, int preptime) {
+    public Recipe(String recipename, List<Ingredient> ingredlist, int preptime) {
         this.recipename = recipename;
         this.ingredlist = ingredlist;
         this.preptime = preptime;
@@ -22,11 +22,11 @@ public class Recipe {
         this.recipename = recipename;
     }
 
-    public Ingredient[] getIngredlist() {
+    public List<Ingredient> getIngredlist() {
         return ingredlist;
     }
 
-    public void setIngredlist(Ingredient[] ingredlist) {
+    public void setIngredlist(List<Ingredient> ingredlist) {
         this.ingredlist = ingredlist;
     }
 
@@ -42,8 +42,17 @@ public class Recipe {
     public String toString() {
         return "Recipe{" +
                 "recipename='" + recipename + '\'' +
-                ", ingredlist=" + Arrays.toString(ingredlist) +
+                ", ingredlist=" + ingredlist +
                 ", preptime=" + preptime +
                 '}';
+    }
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }

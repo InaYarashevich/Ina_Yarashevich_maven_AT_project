@@ -1,6 +1,5 @@
 package tests;
 
-import driver.Config;
 import driver.Driver;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -14,7 +13,7 @@ import pages.booking.login.BookingSignInPage;
 import pages.booking.registration.BookingRegistrationPage;
 import pages.utils.MailRuInboxFolderPage;
 import pages.utils.MailRuMainPage;
-import steps.BaseSteps;
+import steps.gui.BaseSteps;
 import utils.CreatingTempMail;
 
 public class BookingRegistrationTest extends BaseSteps {

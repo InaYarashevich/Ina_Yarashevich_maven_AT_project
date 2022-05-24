@@ -15,7 +15,6 @@ import pages.booking.login.BookingSignInPage;
 import pages.booking.searchResults.BookingSearchResultPage;
 
 public class BookingWishlistTest extends BookingBasePage {
-
     BookingMainPage mainPage = new BookingMainPage();
     BookingHomepage homepage = new BookingHomepage();
     BookingSignInPage signInPage = new BookingSignInPage();
@@ -32,7 +31,6 @@ public class BookingWishlistTest extends BookingBasePage {
 
     @Test
     public void getWishlistItemsTest() {
-
         driver.get("https://www.booking.com/");
         LOGGER.info("Switching to Sign in page");
         mainPage.clickSignIn();

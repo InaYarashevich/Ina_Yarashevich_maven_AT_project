@@ -1,4 +1,4 @@
-package steps;
+package steps.gui;
 
 import driver.Config;
 import driver.Driver;

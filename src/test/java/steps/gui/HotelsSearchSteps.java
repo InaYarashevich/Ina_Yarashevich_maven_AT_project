@@ -1,4 +1,4 @@
-package steps;
+package steps.gui;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;

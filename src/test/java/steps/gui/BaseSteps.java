@@ -1,4 +1,4 @@
-package steps;
+package steps.gui;
 
 
 import pages.booking.*;
