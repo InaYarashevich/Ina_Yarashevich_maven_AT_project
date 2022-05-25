@@ -7,9 +7,9 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pages.booking.BookingMainPage;
-import pages.booking.base.BookingBasePage;
-import pages.booking.searchResults.BookingSearchResultPage;
+import pages.gui.main.BookingMainPage;
+import pages.gui.base.BookingBasePage;
+import pages.gui.searchResults.BookingSearchResultPage;
 
 import java.util.ArrayList;
 

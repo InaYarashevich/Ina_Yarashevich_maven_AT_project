@@ -6,12 +6,12 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pages.booking.BookingHomepage;
-import pages.booking.BookingMainPage;
-import pages.booking.login.BookingSignInPage;
-import pages.booking.registration.BookingRegistrationPage;
-import pages.utils.MailRuInboxFolderPage;
-import pages.utils.MailRuMainPage;
+import pages.gui.main.BookingHomepage;
+import pages.gui.main.BookingMainPage;
+import pages.gui.login.BookingSignInPage;
+import pages.gui.registration.BookingRegistrationPage;
+import pages.gui.utils.MailRuInboxFolderPage;
+import pages.gui.utils.MailRuMainPage;
 import utils.CreatingTempMail;
 
 

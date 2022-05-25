@@ -7,12 +7,12 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pages.booking.BookingHomepage;
-import pages.booking.BookingMainPage;
-import pages.booking.BookingWishlistPage;
-import pages.booking.base.BookingBasePage;
-import pages.booking.login.BookingSignInPage;
-import pages.booking.searchResults.BookingSearchResultPage;
+import pages.gui.main.BookingHomepage;
+import pages.gui.main.BookingMainPage;
+import pages.gui.main.BookingWishlistPage;
+import pages.gui.base.BookingBasePage;
+import pages.gui.login.BookingSignInPage;
+import pages.gui.searchResults.BookingSearchResultPage;
 
 public class BookingWishlistTest extends BookingBasePage {
     BookingMainPage mainPage = new BookingMainPage();

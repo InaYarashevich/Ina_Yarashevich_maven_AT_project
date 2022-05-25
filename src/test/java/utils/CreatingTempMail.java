@@ -1,6 +1,6 @@
 package utils;
 
-import pages.utils.TrashmailMainPage;
+import pages.gui.utils.TrashmailMainPage;
 
 public class CreatingTempMail {
 

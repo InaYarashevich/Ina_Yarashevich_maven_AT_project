@@ -1,8 +1,8 @@
-package pages.booking;
+package pages.gui.main;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.booking.base.BookingBasePage;
+import pages.gui.base.BookingBasePage;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-import static pages.booking.BookingHomepage.SEARCH_INPUT_FIELD_CSS;
+import static pages.gui.main.BookingHomepage.SEARCH_INPUT_FIELD_CSS;
 
 public class BookingMainPage extends BookingBasePage {
     private static LocalDate currentDate = LocalDate.now();

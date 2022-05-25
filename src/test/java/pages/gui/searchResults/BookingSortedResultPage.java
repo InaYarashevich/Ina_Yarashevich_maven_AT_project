@@ -1,8 +1,8 @@
-package pages.booking.searchResults;
+package pages.gui.searchResults;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.booking.base.BookingBasePage;
+import pages.gui.base.BookingBasePage;
 
 public class BookingSortedResultPage extends BookingBasePage {
 

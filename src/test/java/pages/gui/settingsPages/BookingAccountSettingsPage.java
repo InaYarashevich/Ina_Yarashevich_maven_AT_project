@@ -1,7 +1,7 @@
-package pages.booking;
+package pages.gui.settingsPages;
 
 import org.openqa.selenium.By;
-import pages.booking.base.BookingBasePage;
+import pages.gui.base.BookingBasePage;
 
 public class BookingAccountSettingsPage extends BookingBasePage {
 

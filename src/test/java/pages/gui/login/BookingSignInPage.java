@@ -1,7 +1,7 @@
-package pages.booking.login;
+package pages.gui.login;
 
 import org.openqa.selenium.By;
-import pages.booking.base.BookingBasePage;
+import pages.gui.base.BookingBasePage;
 
 public class BookingSignInPage extends BookingBasePage {
 

@@ -1,10 +1,10 @@
-package pages.booking;
+package pages.gui.main;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.booking.base.BookingBasePage;
+import pages.gui.base.BookingBasePage;
 
-import static pages.booking.BookingMainPage.*;
+import static pages.gui.main.BookingMainPage.*;
 
 public class BookingHomepage extends BookingBasePage {
 

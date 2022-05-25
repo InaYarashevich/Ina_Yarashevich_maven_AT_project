@@ -21,8 +21,7 @@
                 <version>2.22.2</version>
                 <configuration>
                     <includes>
-                        <include>**/FakeRunner.java</include>
-                        <include>**/FakeRunner2.java</include>
+                        <include>**/JUnit4Runner.java</include>
                     </includes>
                     <forkCount>2</forkCount>
                     <reuseForks>true</reuseForks>

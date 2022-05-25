@@ -1,4 +1,4 @@
-package pages.utils;
+package pages.gui.utils;
 
 import driver.Driver;
 import org.openqa.selenium.By;

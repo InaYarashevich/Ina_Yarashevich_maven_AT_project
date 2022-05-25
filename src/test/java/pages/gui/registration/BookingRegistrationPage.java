@@ -1,10 +1,10 @@
-package pages.booking.registration;
+package pages.gui.registration;
 
 import org.openqa.selenium.By;
-import pages.booking.base.BookingBasePage;
+import pages.gui.base.BookingBasePage;
 
-import static pages.booking.login.BookingSignInPage.EMAIL_INPUT_CSS;
-import static pages.booking.login.BookingSignInPage.SUBMIT_BUTTON_XPATH;
+import static pages.gui.login.BookingSignInPage.EMAIL_INPUT_CSS;
+import static pages.gui.login.BookingSignInPage.SUBMIT_BUTTON_XPATH;
 
 public class BookingRegistrationPage extends BookingBasePage {
 
