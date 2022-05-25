@@ -10,12 +10,14 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.when;
 
+
 public class JokesTest {
 
     @Before
-    public void setup(){
+    public void setup() {
         RestAssured.given().spec(new RequestSpecBuilder()
                 .setBaseUri("http://api.icndb.com")
+                .setBasePath("/jokes")
                 .setAccept(ContentType.ANY)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
@@ -24,14 +26,14 @@ public class JokesTest {
 
     @Test
     public void fetchRandomJoke() {
-                when()
-                .get("/jokes/random")
+        when()
+                .get("/random")
                 .then()
                 .extract().response().body().prettyPrint();
     }
 
     @Test
-    public void changeTheNameOfTheMainCharacter(){
+    public void changeTheNameOfTheMainCharacter() {
         RequestSpecification requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("http://api.icndb.com/jokes/random?firstName=John&lastName=Doe")
                 .setAccept(ContentType.ANY)
@@ -49,7 +51,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchMultipleRandomJokes(){
+    public void fetchMultipleRandomJokes() {
         RequestSpecification requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("http://api.icndb.com/jokes/random/3")
                 .setAccept(ContentType.ANY)
@@ -67,7 +69,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchSpecificJoke(){
+    public void fetchSpecificJoke() {
         RequestSpecification requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("http://api.icndb.com/jokes/123")
                 .setAccept(ContentType.ANY)
@@ -85,7 +87,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchTheNumberOfJokes(){
+    public void fetchTheNumberOfJokes() {
         RequestSpecification requestSpecification = new RequestSpecBuilder()
                 .setBaseUri("http://api.icndb.com/jokes/count")
                 .setAccept(ContentType.ANY)
