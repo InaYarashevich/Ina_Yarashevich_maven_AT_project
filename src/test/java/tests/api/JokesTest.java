@@ -5,24 +5,27 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.junit.Before;
 import org.junit.Test;
+
+import static io.restassured.RestAssured.when;
 
 public class JokesTest {
 
-    @Test
-    public void fetchRandomJoke() {
-        RequestSpecification requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("http://api.icndb.com/jokes/")
+    @Before
+    public void setup(){
+        RestAssured.given().spec(new RequestSpecBuilder()
+                .setBaseUri("http://api.icndb.com")
                 .setAccept(ContentType.ANY)
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL)
-                .build();
+                .build());
+    }
 
-        RestAssured
-                .given()
-                .spec(requestSpecification)
-                .when()
-                .get()
+    @Test
+    public void fetchRandomJoke() {
+                when()
+                .get("/jokes/random")
                 .then()
                 .extract().response().body().prettyPrint();
     }
