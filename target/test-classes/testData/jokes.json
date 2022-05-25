@@ -1,4 +1,6 @@
 {
-  "type": "success",
-  "value": 574
+  "id": 123,
+  "joke": "Some people wear Superman pajamas. Superman wears Chuck Norris pajamas.",
+  "categories": [
+  ]
 }

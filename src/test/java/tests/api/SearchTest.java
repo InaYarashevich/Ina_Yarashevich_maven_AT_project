@@ -22,7 +22,7 @@ public class SearchTest {
         HttpClient client = HttpClientBuilder.create().build();
         URIBuilder builder = new URIBuilder("http://178.124.206.46:8001/app/ws/");
         HttpPost request = new HttpPost(builder.build());
-        request.setEntity(new StringEntity(SearchParser.fromGSON(new Search("alberto", false))));
+        request.setEntity(new StringEntity(SearchParser.fromGSON(new Search("berta", false))));
         HttpResponse response = client.execute(request);
         Assert.assertNotNull("Search by full name 'short' does not return results.",
                 EntityUtils.toString(response.getEntity()));

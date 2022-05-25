@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class JokesResponseDataParser {
 
-    private static final String JSON = "src/test/resources/testData/jokes.json";
+    private static final String JSON = "src/test/resources/testData/jokesData.json";
 
     public static JokesResponseData parseData() throws IOException {
         Gson gson = new Gson();

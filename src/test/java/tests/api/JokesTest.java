@@ -5,9 +5,11 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import objects.api.Joke;
 import objects.api.JokesResponseData;
 import org.junit.Before;
 import org.junit.Test;
+import utils.JokesParser;
 import utils.JokesResponseDataParser;
 
 
@@ -19,6 +21,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class JokesTest {
 
     JokesResponseData jokesResponseData = JokesResponseDataParser.parseData();
+    Joke joke = JokesParser.parseData();
 
     public JokesTest() throws IOException {
     }
@@ -93,7 +96,8 @@ public class JokesTest {
                 .when()
                 .get()
                 .then()
-                .extract().response().body().prettyPrint();
+                .assertThat().body("value.joke", equalTo(joke.getJoke()))
+                .assertThat().statusCode(200);
     }
 
     @Test
