@@ -5,13 +5,23 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import objects.api.JokesResponseData;
 import org.junit.Before;
 import org.junit.Test;
+import utils.JokesResponseDataParser;
+
+
+import java.io.IOException;
 
 import static io.restassured.RestAssured.when;
-
+import static org.hamcrest.Matchers.equalTo;
 
 public class JokesTest {
+
+    JokesResponseData jokesResponseData = JokesResponseDataParser.parseData();
+
+    public JokesTest() throws IOException {
+    }
 
     @Before
     public void setup() {
@@ -101,6 +111,6 @@ public class JokesTest {
                 .when()
                 .get()
                 .then()
-                .extract().response().body().prettyPrint();
+                .assertThat().body("value", equalTo(jokesResponseData.getValue()));
     }
 }

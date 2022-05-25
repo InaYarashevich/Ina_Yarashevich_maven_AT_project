@@ -1,17 +1,13 @@
 package objects.api;
 
-import java.util.List;
-
 public class JokesResponseData {
 
     private String type;
-    private List<Joke> jokes;
-    private int numberOfJokes;
+    private int value;
 
-    public JokesResponseData(String type, List<Joke> jokes, int numberOfJokes) {
+    public JokesResponseData(String type, int value) {
         this.type = type;
-        this.jokes = jokes;
-        this.numberOfJokes = numberOfJokes;
+        this.value = value;
     }
 
     public String getType() {
@@ -22,28 +18,19 @@ public class JokesResponseData {
         this.type = type;
     }
 
-    public List<Joke> getJokes() {
-        return jokes;
+    public int getValue() {
+        return value;
     }
 
-    public void setJokes(List<Joke> jokes) {
-        this.jokes = jokes;
-    }
-
-    public int getNumberOfJokes() {
-        return numberOfJokes;
-    }
-
-    public void setNumberOfJokes(int numberOfJokes) {
-        this.numberOfJokes = numberOfJokes;
+    public void setValue(int numberOfJokes) {
+        this.value = value;
     }
 
     @Override
     public String toString() {
         return "JokesResponseData{" +
                 "type='" + type + '\'' +
-                ", jokes=" + jokes +
-                ", numberOfJokes=" + numberOfJokes +
+                ", value=" + value +
                 '}';
     }
 
