@@ -2,12 +2,12 @@ package objects.api;
 
 import java.util.List;
 
-public class Data {
+public class UsersResponseData {
 
     private   String code;
     private List<User> data;
 
-    public Data(String code, List<User> data) {
+    public UsersResponseData(String code, List<User> data) {
         this.code = code;
         this.data = data;
     }
