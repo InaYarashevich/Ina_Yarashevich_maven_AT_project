@@ -45,7 +45,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchRandomJoke() {
+    public void fetchRandomJokeTest() {
         RestAssured.given()
                 .spec(requestSpecification)
                 .when()
@@ -59,7 +59,7 @@ public class JokesTest {
     }
 
     @Test
-    public void changeTheNameOfTheMainCharacter() {
+    public void changeTheNameOfTheMainCharacterTest() {
         requestSpecification
                 .formParam("firstName", mainCharacter.getFirstName())
                 .formParam("lastName", mainCharacter.getLastName());
@@ -76,7 +76,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchMultipleRandomJokes() {
+    public void fetchMultipleRandomJokesTest() {
         RestAssured
                 .given()
                 .spec(requestSpecification)
@@ -90,7 +90,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchSpecificJoke() {
+    public void fetchSpecificJokeTest() {
         RestAssured
                 .given()
                 .spec(requestSpecification)
@@ -102,7 +102,7 @@ public class JokesTest {
     }
 
     @Test
-    public void fetchTheNumberOfJokes() {
+    public void fetchTheNumberOfJokesTest() {
         RestAssured
                 .given()
                 .spec(requestSpecification)

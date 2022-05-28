@@ -1,11 +1,13 @@
 package objects.api;
 
+import java.util.List;
+
 public class JokesResponseData {
 
     private String type;
-    private int value;
+    private List<Joke> value;
 
-    public JokesResponseData(String type, int value) {
+    public JokesResponseData(String type, List<Joke> value) {
         this.type = type;
         this.value = value;
     }
@@ -18,11 +20,11 @@ public class JokesResponseData {
         this.type = type;
     }
 
-    public int getValue() {
+    public List<Joke> getValue() {
         return value;
     }
 
-    public void setValue(int numberOfJokes) {
+    public void setValue(List<Joke> value) {
         this.value = value;
     }
 
