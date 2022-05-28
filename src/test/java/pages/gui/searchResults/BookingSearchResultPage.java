@@ -22,19 +22,10 @@ public class BookingSearchResultPage extends BookingBasePage {
     private static final String PLEASANT_REVIEW_SCORE_FILTER_XPATH = "//div[@data-filters-group='review_score']//input[@value='review_score=60']/../label/span";
     private static final String HOTEL_RATING_XPATH = "//div[@data-testid='review-score-right-component']/div[@aria-label]";
     private static final String CALENDAR_CSS = "button[data-testid='date-display-field-start']";
+    private static final String CHECKIN_CALENDAR_XPATH = "//div[contains(text(), 'Check-in date')]";
 
-    private int ratingFilterValue;
-
-    public BookingSearchResultPage(int ratingFilterValue) {
-        this.ratingFilterValue = ratingFilterValue;
-    }
-
-    public int getRatingFilterValue() {
-        return ratingFilterValue;
-    }
-
-    public void setRatingFilterValue(int ratingFilterValue) {
-        this.ratingFilterValue = ratingFilterValue;
+    public void closeCalendar(){
+        driver.findElement(By.xpath(CHECKIN_CALENDAR_XPATH)).click();
     }
 
     public String getHotelTitle(int element) {

@@ -16,7 +16,7 @@ import utils.CreatingTempMail;
 public class BaseSteps {
 
     BookingMainPage mainPage = new BookingMainPage();
-    BookingSearchResultPage searchResultPage = new BookingSearchResultPage(90);
+    BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
     BookingFilteredResultPage filteredResultPage = new BookingFilteredResultPage();
     BookingSortedResultPage sortedResultPage = new BookingSortedResultPage();
     BookingHomepage homepage = new BookingHomepage();

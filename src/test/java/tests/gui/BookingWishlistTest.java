@@ -18,7 +18,7 @@ public class BookingWishlistTest extends BookingBasePage {
     BookingMainPage mainPage = new BookingMainPage();
     BookingHomepage homepage = new BookingHomepage();
     BookingSignInPage signInPage = new BookingSignInPage();
-    BookingSearchResultPage searchResultPage = new BookingSearchResultPage(90);
+    BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
     BookingWishlistPage wishlistPage = new BookingWishlistPage();
     private static final Logger LOGGER =
             Logger.getLogger(BookingWishlistTest.class.getName());
@@ -26,7 +26,6 @@ public class BookingWishlistTest extends BookingBasePage {
     @Before
     public void startTest(){
         LOGGER.info("#Starting the test#");
-        Driver.setConfig(Config.CHROME);
     }
 
     @Test

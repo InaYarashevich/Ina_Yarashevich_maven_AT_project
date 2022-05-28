@@ -17,7 +17,7 @@ public class HotelsSearchSteps extends BaseSteps{
 
     @And("I select the number of the adults")
     public void iSelectTheNumberOfTheAdults() {
-        mainPage.selectNumberOfAdults();
+        mainPage.selectNumberOfVisitors();
     }
 
     @And("I select the number of the rooms")

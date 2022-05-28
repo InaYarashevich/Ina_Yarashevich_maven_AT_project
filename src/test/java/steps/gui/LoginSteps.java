@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class LoginSteps extends BaseSteps {
 
     @Given("I open Booking main page")
@@ -25,8 +27,8 @@ public class LoginSteps extends BaseSteps {
         signInPage.signIn(email, password);
     }
 
-    @Then("I see {string} element")
-    public void iSeeElements(String element) {
+    @Then("^I see following elements$")
+    public void iSeeFollowingElements(List<String> element) {
         Assert.assertTrue(String.format("% element is not displayed on the page!", element),
                 homepage.getWebElement(element).isDisplayed());
     }

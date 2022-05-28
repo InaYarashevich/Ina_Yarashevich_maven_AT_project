@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.gui.base.BookingBasePage;
 
+import java.util.List;
+
 import static pages.gui.main.BookingMainPage.*;
 
 public class BookingHomepage extends BookingBasePage {

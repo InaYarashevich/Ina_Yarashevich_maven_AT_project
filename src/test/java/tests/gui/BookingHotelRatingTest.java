@@ -7,6 +7,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.ElementNotInteractableException;
 import pages.gui.main.BookingMainPage;
 import pages.gui.base.BookingBasePage;
 import pages.gui.searchResults.BookingSearchResultPage;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 public class BookingHotelRatingTest extends BookingBasePage {
     BookingMainPage mainPage = new BookingMainPage();
-    BookingSearchResultPage searchResultPage = new BookingSearchResultPage(90);
+    BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
     private static final Logger LOGGER =
             Logger.getLogger(BookingHotelRatingTest.class.getName());
 
@@ -34,8 +35,14 @@ public class BookingHotelRatingTest extends BookingBasePage {
         LOGGER.info("The destination city is selected.");
         mainPage.clickSearch();
         LOGGER.info("Start searching hotels.");
-        searchResultPage.filterResultsByRating("SUPERB");
-        LOGGER.info("Filtering hotels by max rating.");
+
+        try {
+            searchResultPage.filterResultsByRating("SUPERB");
+            LOGGER.info("Filtering hotels by max rating.");
+        } catch (ElementNotInteractableException exception){
+            searchResultPage.closeCalendar();
+        }
+
         searchResultPage.openHotelDetailsPage(0);
         LOGGER.info("Opening hotel details page.");
 
