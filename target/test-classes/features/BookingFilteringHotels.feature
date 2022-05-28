@@ -4,7 +4,7 @@ Feature: Hotels Filtering
     Given I open Booking main page
     When I fill "Париж"  in the field
     And I select check in date
-    And I select checkout date
+    And I select checkout date to stay for 5 days
     And I select the number of the adults
     And I select the number of the rooms
     And I click on the Search button
@@ -16,7 +16,7 @@ Feature: Hotels Filtering
     Given I open Booking main page
     When I fill "Лондон"  in the field
     And I select check in date
-    And I select checkout date
+    And I select checkout date to stay for 5 days
     And I click on the Search button
     Then I see the list of the hotels
 

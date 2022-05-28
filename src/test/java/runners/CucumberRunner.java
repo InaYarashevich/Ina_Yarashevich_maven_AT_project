@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty", "summary"},
         glue = {"steps"},
-        features = {"src/test/resources/features/BookingFilteringHotels.feature"
+        features = {"src/test/resources/features/BookingLogin.feature"
                 },
         strict = true
         //tags = {"@QA"}

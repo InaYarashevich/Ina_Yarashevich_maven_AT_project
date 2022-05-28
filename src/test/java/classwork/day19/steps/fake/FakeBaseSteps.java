@@ -12,7 +12,7 @@ public class FakeBaseSteps {
 
     private static final Logger LOGGER = LogManager.getLogger(FakeBaseSteps.class);
 
-    @Before
+    /*@Before
     public void beforeTest(){
         LOGGER.info("Start test");
         Driver.setConfig(Config.REMOTE);
@@ -22,5 +22,5 @@ public class FakeBaseSteps {
     public void afterTest(){
         LOGGER.info("Killing WebDriver");
         Driver.destroy();
-    }
+    }*/
 }
