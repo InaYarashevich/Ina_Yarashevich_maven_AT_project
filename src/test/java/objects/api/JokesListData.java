@@ -2,12 +2,12 @@ package objects.api;
 
 import java.util.List;
 
-public class JokesResponseData {
+public class JokesListData {
 
     private String type;
     private List<Joke> value;
 
-    public JokesResponseData(String type, List<Joke> value) {
+    public JokesListData(String type, List<Joke> value) {
         this.type = type;
         this.value = value;
     }

@@ -5,10 +5,9 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class DbConnect {
@@ -16,8 +15,11 @@ public class DbConnect {
     private static Properties prop = getProperties();
 
     public static void main(String[] args) {
-       // prop.forEach((key, value) -> System.out.println(value.toString()));
-        execStatement("SHOW TABLES");
+        // prop.forEach((key, value) -> System.out.println(value.toString()));
+        // execStatement("SHOW TABLES");
+        // String query = "SELECT * FROM Categories WHERE CategoryID = ?";
+        // execPreparedStatement(query, 2);
+        loadCategories();
     }
 
     private static Properties getProperties() {
@@ -52,5 +54,39 @@ public class DbConnect {
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
+    }
+
+    private static void execPreparedStatement(String query, int id) {
+        try (Connection connection = getDataSource(prop).getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, id);
+
+            try (ResultSet rs = statement.executeQuery()) {
+                if (rs.next()) {
+                    System.out.println(rs.getString(2));
+                }
+            }
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    private static void loadCategories() {
+        String query = "SELECT * FROM Categories";
+        List<Category> categories = new ArrayList<>();
+
+        try (Connection connection = getDataSource(prop).getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(query)) {
+
+            while (rs.next()) {
+                categories.add(new Category(rs.getInt(1), rs.getString(2), rs.getString(3)));
+            }
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+
+        categories.forEach(category -> System.out.println(category.toString()));
     }
 }
