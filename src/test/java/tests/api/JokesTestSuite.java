@@ -40,7 +40,17 @@ public class JokesTestSuite {
     }
 
     @Test
-    public void fetchRandomJokeTest() {
+    public void fetchRandomJokeStatusCodeTest() {
+        RestAssured.given()
+                .spec(requestSpecification)
+                .when()
+                .get("/random")
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    public void fetchRandomJokeResponseTypeTest() {
         RestAssured.given()
                 .spec(requestSpecification)
                 .when()
@@ -48,7 +58,23 @@ public class JokesTestSuite {
                 .then()
                 .extract()
                 .body()
-                .as(JokesListData.class);
+                .as(JokeResponseData.class)
+                .getType()
+                .equals("success");
+    }
+
+    @Test
+    public void fetchRandomJokeResponseValueTest() {
+        RestAssured.given()
+                .spec(requestSpecification)
+                .when()
+                .get("/random")
+                .then()
+                .extract()
+                .body()
+                .as(JokeResponseData.class)
+                .getJoke()
+                .getId(); //NullPointerException
     }
 
     @Test
@@ -120,7 +146,7 @@ public class JokesTestSuite {
     }
 
     @Test
-    public void fetchSpecificJokeResponseBodyTest() throws NoSuchFieldException {
+    public void fetchSpecificJokeResponseTypeTest() throws NoSuchFieldException {
         RestAssured
                 .given()
                 .spec(requestSpecification)
@@ -146,7 +172,7 @@ public class JokesTestSuite {
                 .body()
                 .as(JokeResponseData.class)
                 .getJoke()
-                .getJoke()
+                .getJoke() // NullPointerException
                 .equals(jokeData.getJoke());
     }
 
@@ -189,8 +215,10 @@ public class JokesTestSuite {
                 .then()
                 .log()
                 .everything()
-                .extract().body().as(JokesCountData.class)
-                .getValue();
+                .extract()
+                .body()
+                .as(JokesCountData.class)
+                .getValue(); // как сравнить кол-во шуток пришедших в респонзе с ожидаемым рез-том (574)?
     }
 
     @After
