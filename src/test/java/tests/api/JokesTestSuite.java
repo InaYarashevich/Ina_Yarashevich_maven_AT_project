@@ -78,7 +78,7 @@ public class JokesTestSuite {
     }
 
     @Test
-    public void changeTheNameOfTheMainCharacterTest() {
+    public void changeTheNameOfTheMainCharacterStatusCodeTest() {
         requestSpecification
                 .formParam("firstName", mainCharacter.getFirstName())
                 .formParam("lastName", mainCharacter.getLastName());
@@ -88,10 +88,44 @@ public class JokesTestSuite {
                 .when()
                 .get()
                 .then()
-                .assertThat()
-                .statusCode(200)
-                .body("value.joke", containsStringIgnoringCase(mainCharacter.getLastName()))
-                .extract().body().asString().contains(mainCharacter.getFirstName());
+                .statusCode(200);
+    }
+
+    @Test
+    public void changeTheNameOfTheMainCharacterResponseTest() {
+        requestSpecification
+                .formParam("firstName", mainCharacter.getFirstName())
+                .formParam("lastName", mainCharacter.getLastName());
+        RestAssured
+                .given()
+                .spec(requestSpecification)
+                .when()
+                .get()
+                .then()
+                .extract()
+                .response()
+                .as(JokeResponseData.class)
+                .getJoke()
+                .equals(Joke.class); // NullPointerException
+    }
+
+    @Test
+    public void changeTheNameOfTheMainCharacterTextTest() {
+        requestSpecification
+                .formParam("firstName", mainCharacter.getFirstName())
+                .formParam("lastName", mainCharacter.getLastName());
+        RestAssured
+                .given()
+                .spec(requestSpecification)
+                .when()
+                .get()
+                .then()
+                .extract()
+                .body()
+                .jsonPath()
+                .get("value.joke")
+                .toString()
+                .contains(mainCharacter.getFirstName());
     }
 
     @Test
@@ -170,9 +204,8 @@ public class JokesTestSuite {
                 .then()
                 .extract()
                 .body()
-                .as(JokeResponseData.class)
-                .getJoke()
-                .getJoke() // NullPointerException
+                .jsonPath()
+                .get("value.joke") // так можно?
                 .equals(jokeData.getJoke());
     }
 
