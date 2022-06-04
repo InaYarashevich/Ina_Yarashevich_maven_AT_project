@@ -3,10 +3,7 @@ package tests.gui;
 import driver.Config;
 import driver.Driver;
 import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.ElementNotInteractableException;
 import pages.gui.main.BookingMainPage;
 import pages.gui.base.BookingBasePage;
@@ -20,10 +17,10 @@ public class BookingHotelRatingTest extends BookingBasePage {
     private static final Logger LOGGER =
             Logger.getLogger(BookingHotelRatingTest.class.getName());
 
-    @Before
-    public void startTest() {
+    @BeforeClass
+    public static void startTest() {
         LOGGER.info("#Starting the test#");
-        Driver.getWebDriver().manage().window().maximize();
+        Driver.setConfig(Config.FIREFOX);
     }
 
     @Test

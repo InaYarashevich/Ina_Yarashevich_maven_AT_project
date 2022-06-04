@@ -15,7 +15,7 @@ public class Driver {
 
     public static WebDriver getWebDriver() {
         if (driver == null) {
-            driver = DriverManager.getDriver(Config.CHROME);
+            driver = DriverManager.getDriver(config);
         }
         setTimeouts(30);
         return driver;

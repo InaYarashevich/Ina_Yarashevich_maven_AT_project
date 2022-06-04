@@ -1,6 +1,8 @@
 package pages.gui.base;
 
+import driver.Config;
 import driver.Driver;
+import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,7 +16,11 @@ public abstract class BookingBasePage {
     private static final String LOADER_XPATH = "//div[@data-testid='overlay-spinner']";
 
     public WebDriver driver = Driver.getWebDriver();
-    
+
+    @BeforeClass
+    public static void initDriver(){
+        Driver.setConfig(Config.CHROME);
+    }
 
     public void waitsForLoader() {
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);

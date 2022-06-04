@@ -3,11 +3,11 @@ package objects.api;
 public class JokeResponseData {
 
     private String type;
-    private Joke joke;
+    private Joke value;
 
-    public JokeResponseData(String type, Joke joke) {
+    public JokeResponseData(String type, Joke value) {
         this.type = type;
-        this.joke = joke;
+        this.value = value;
     }
 
     public String getType() {
@@ -19,18 +19,18 @@ public class JokeResponseData {
     }
 
     public Joke getJoke() {
-        return joke;
+        return value;
     }
 
     public void setJoke(Joke joke) {
-        this.joke = joke;
+        this.value = joke;
     }
 
     @Override
     public String toString() {
         return "JokeResponseData{" +
                 "type='" + type + '\'' +
-                ", joke=" + joke +
+                ", joke=" + value +
                 '}';
     }
 

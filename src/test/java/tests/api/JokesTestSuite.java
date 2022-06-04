@@ -14,8 +14,6 @@ import utils.DataParser;
 
 import java.io.IOException;
 
-import static org.hamcrest.Matchers.*;
-
 public class JokesTestSuite {
 
     Joke jokeData = DataParser.parseJokesData();
@@ -28,7 +26,7 @@ public class JokesTestSuite {
             Logger.getLogger(JokesTestSuite.class.getName());
 
     RequestSpecification requestSpecification = RestAssured.given().spec(new RequestSpecBuilder()
-            .setBaseUri("http://api.icndb.com")
+            .setBaseUri("https://www.shop-apotheke.com")
             .setBasePath("/jokes")
             .setAccept(ContentType.ANY)
             .setContentType(ContentType.JSON)
@@ -74,7 +72,7 @@ public class JokesTestSuite {
                 .body()
                 .as(JokeResponseData.class)
                 .getJoke()
-                .getId(); //NullPointerException
+                .equals(Joke.class);
     }
 
     @Test
