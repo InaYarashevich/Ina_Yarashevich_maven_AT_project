@@ -104,7 +104,7 @@ public class JokesTestSuite {
                 .response()
                 .as(JokeResponseData.class)
                 .getJoke()
-                .equals(Joke.class); // NullPointerException
+                .equals(Joke.class);
     }
 
     @Test
