@@ -15,14 +15,14 @@ public class HotelsSearchSteps extends BaseSteps{
         mainPage.selectCheckInDate();
     }
 
-    @And("I select the number of the adults")
-    public void iSelectTheNumberOfTheAdults() {
-        mainPage.selectNumberOfVisitors();
+    @And("I select the {int} adults and {int} children")
+    public void iSelectTheNumberOfTheAdults(int numOfAdults, int numOfChildren) {
+        mainPage.selectNumberOfVisitors(numOfAdults, numOfChildren);
     }
 
-    @And("I select the number of the rooms")
-    public void iSelectTheNumberOfTheRooms() {
-        mainPage.selectNumberOfRooms();
+    @And("I select the {int} rooms")
+    public void iSelectTheNumberOfTheRooms(int numOfRooms) {
+        mainPage.selectNumberOfRooms(numOfRooms);
     }
 
     @And("I click on the Search button")

@@ -2,6 +2,7 @@ package tests.gui;
 
 import driver.Config;
 import driver.Driver;
+import objects.gui.SearchResults;
 import org.apache.log4j.Logger;
 import org.junit.*;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -14,11 +15,13 @@ import java.util.ArrayList;
 public class BookingHotelRatingTest extends BookingBasePage {
     BookingMainPage mainPage = new BookingMainPage();
     BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
+    SearchResults searchResults = new SearchResults();
+
     private static final Logger LOGGER =
             Logger.getLogger(BookingHotelRatingTest.class.getName());
 
-    @BeforeClass
-    public static void startTest() {
+    @Before
+    public void startTest() {
         LOGGER.info("#Starting the test#");
         Driver.setConfig(Config.FIREFOX);
     }
@@ -52,7 +55,7 @@ public class BookingHotelRatingTest extends BookingBasePage {
         driver.switchTo().window(tabs.get(1));
 
         Assert.assertTrue("The actual hotel rating is less than the expected max hotel rating.",
-                searchResultPage.getHotelRating() >= searchResultPage.getHotelRating());
+                searchResultPage.getHotelRating() >= searchResults.getRatingFilterValue());
     }
 
     @After

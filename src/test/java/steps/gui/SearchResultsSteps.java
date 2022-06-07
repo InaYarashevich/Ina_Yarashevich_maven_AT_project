@@ -6,6 +6,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import objects.gui.SearchResults;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import tests.gui.BookingHotelRatingTest;
@@ -43,19 +44,19 @@ public class SearchResultsSteps extends BaseSteps{
         searchResultPage.openHotelDetailsPage(hotelOrderNumber);
     }
 
-    @And("I filter the list of the found hotels by the max price per night")
-    public void iFilterTheListOfTheFoundHotelsByTheMaxPricePerNight() {
-        searchResultPage.filterResultsByMaxPrice();
+    @And("I filter the list of the found hotels by the {string} price per night")
+    public void iFilterTheListOfTheFoundHotelsByTheMaxPricePerNight(String price) {
+        searchResultPage.filterResultsByPrice(price);
     }
 
     @And("I sort the list of the results by the lowest price")
     public void iSortTheListOfTheResultsByTheLowestPrice() {
-        filteredResultPage.sortByLowestPrice();
+        searchResultPage.sortByLowestPrice();
     }
 
     @Then("I see the list of the hotels with max price per night")
     public void iSeeTheListOfTheHotelsWithMaxPricePerNight() {
         Assert.assertTrue("The actual hotel price is less than the expected max price.",
-                sortedResultPage.getHotelPrice() >= sortedResultPage.getMaxPrice());
+                searchResultPage.getHotelPrice() >= new SearchResults().getPrice());
     }
 }

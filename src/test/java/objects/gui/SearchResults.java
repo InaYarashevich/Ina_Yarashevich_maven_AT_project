@@ -2,17 +2,30 @@ package objects.gui;
 
 public class SearchResults {
 
-    private int ratingFilterValue;
+    private double ratingFilterValue;
+    private double price;
 
-    public SearchResults(int ratingFilterValue) {
-        this.ratingFilterValue = ratingFilterValue;
+    public SearchResults(double ratingFilterValue, double price) {
+        setRatingFilterValue(90);
+        setPrice(800);
     }
 
-    public int getRatingFilterValue() {
+    public SearchResults() {
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getRatingFilterValue() {
         return ratingFilterValue;
     }
 
-    public void setRatingFilterValue(int ratingFilterValue) {
+    public void setRatingFilterValue(double ratingFilterValue) {
         this.ratingFilterValue = ratingFilterValue;
     }
 
