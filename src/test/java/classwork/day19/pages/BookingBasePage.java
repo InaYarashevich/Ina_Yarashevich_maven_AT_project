@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +15,9 @@ public class BookingBasePage {
 
     private static final String LOADER_XPATH = "//div[@data-testid='overlay-spinner']";
     public WebDriver driver = Driver.getWebDriver();
+
+    public BookingBasePage() throws MalformedURLException {
+    }
 
     public void waitsForLoader() {
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);

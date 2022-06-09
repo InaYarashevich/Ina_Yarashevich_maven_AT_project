@@ -14,6 +14,8 @@ import pages.gui.base.BookingBasePage;
 import pages.gui.login.BookingSignInPage;
 import pages.gui.searchResults.BookingSearchResultPage;
 
+import java.net.MalformedURLException;
+
 public class BookingWishlistTest extends BookingBasePage {
     BookingMainPage mainPage = new BookingMainPage();
     BookingHomepage homepage = new BookingHomepage();
@@ -22,6 +24,9 @@ public class BookingWishlistTest extends BookingBasePage {
     BookingWishlistPage wishlistPage = new BookingWishlistPage();
     private static final Logger LOGGER =
             Logger.getLogger(BookingWishlistTest.class.getName());
+
+    public BookingWishlistTest() throws MalformedURLException {
+    }
 
     @Before
     public void startTest(){

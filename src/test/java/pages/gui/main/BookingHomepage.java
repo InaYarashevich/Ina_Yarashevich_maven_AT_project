@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.gui.base.BookingBasePage;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 import static pages.gui.main.BookingMainPage.*;
@@ -20,6 +21,9 @@ public class BookingHomepage extends BookingBasePage {
     private static final String WELCOME_POPUP_CLOSE_BUTTON_CSS = ".modal-mask-closeBtn";
     private static final String MANAGE_ACCOUNT_XPATH = "//span[contains(text(),'Manage account')]";
     public static final String SEARCH_INPUT_FIELD_CSS = "#ss";
+
+    public BookingHomepage() throws MalformedURLException {
+    }
 
     public void setCheckInDate(){
         driver.findElement(By.xpath(CHECKIN_DATE_XPATH))

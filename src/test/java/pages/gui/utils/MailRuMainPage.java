@@ -4,6 +4,7 @@ import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 public class MailRuMainPage {
@@ -14,6 +15,9 @@ public class MailRuMainPage {
     private static final String ENTER_PASSWORD_CSS = "button[data-test-id='next-button']";
     private static final String PASSWORD_CSS = "input[name='password']";
     private static final String SIGNIN_CSS = "button[data-test-id='submit-button']";
+
+    public MailRuMainPage() throws MalformedURLException {
+    }
 
     public void loginMailRu(String accountName, String password) {
         driver.findElement(By.xpath(MAIL_BUTTON_XPATH)).click();

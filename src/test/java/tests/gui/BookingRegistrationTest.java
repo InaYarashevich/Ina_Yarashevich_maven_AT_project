@@ -14,11 +14,22 @@ import pages.gui.utils.MailRuInboxFolderPage;
 import pages.gui.utils.MailRuMainPage;
 import utils.CreatingTempMail;
 
+import java.net.MalformedURLException;
+
 public class BookingRegistrationTest extends BookingBasePage {
 
     BookingMainPage mainPage = new BookingMainPage();
     BookingRegistrationPage registrationPage = new BookingRegistrationPage();
-    static CreatingTempMail tempMail = new CreatingTempMail();
+    static CreatingTempMail tempMail;
+
+    static {
+        try {
+            tempMail = new CreatingTempMail();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     BookingHomepage homepage = new BookingHomepage();
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
@@ -29,8 +40,11 @@ public class BookingRegistrationTest extends BookingBasePage {
     private static final Logger LOGGER =
             Logger.getLogger(BookingRegistrationTest.class.getName());
 
+    protected BookingRegistrationTest() throws MalformedURLException {
+    }
+
     @BeforeClass
-    public static void createEmail() {
+    public static void createEmail() throws MalformedURLException {
         LOGGER.info("#Starting the test#");
         Driver.getWebDriver().manage().window().maximize();
         Driver.getWebDriver().get("https://trashmail.com/?lang=en");
@@ -39,7 +53,7 @@ public class BookingRegistrationTest extends BookingBasePage {
     }
 
     @Test
-    public void registerWithEmailPassword() {
+    public void registerWithEmailPassword() throws MalformedURLException {
         Driver.getWebDriver().get("https://www.booking.com/");
         LOGGER.info("Booking.com main page is opened.");
         mainPage.startRegistration();
@@ -50,7 +64,7 @@ public class BookingRegistrationTest extends BookingBasePage {
     }
 
     @Test
-    public void verifyEmailIsConfirmed() {
+    public void verifyEmailIsConfirmed() throws MalformedURLException {
 
         String winHandleBefore = driver.getWindowHandle();
 

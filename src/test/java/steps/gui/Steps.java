@@ -6,8 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.net.MalformedURLException;
+
 
 public class Steps extends BaseSteps{
+    public Steps() throws MalformedURLException {
+    }
+
     @Then("I see the list of the hotels")
     public void iSeeTheListOfTheHotels() {
         Assert.assertFalse("The are no hotels' results.", searchResultPage.getResults().isEmpty());

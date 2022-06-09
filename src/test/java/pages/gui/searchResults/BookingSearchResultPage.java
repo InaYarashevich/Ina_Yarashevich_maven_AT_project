@@ -1,8 +1,10 @@
 package pages.gui.searchResults;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.Color;
 import pages.gui.base.BookingBasePage;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class BookingSearchResultPage extends BookingBasePage {
@@ -39,12 +41,25 @@ public class BookingSearchResultPage extends BookingBasePage {
                 .getText();
     }
 
+    public void paintHotelTitleColor(int element){
+        WebElement hotel = driver.findElements(By.xpath(PROPERTY_CARD_XPATH)).get(element);
+        WebElement title = driver.findElement(By.xpath(HOTEL_TITLE_XPATH));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", hotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.backgroundColor = 'green'", hotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.color = 'red'", title);
+    }
+
+    public String getTitleColor(){
+        WebElement title = driver.findElement(By.xpath(HOTEL_TITLE_XPATH));
+        return Color.fromString(title.getCssValue("color")).asHex();
+    }
+
     public double getHotelRating() {
         double rating =
                 Double.parseDouble(driver.findElement(By.xpath(HOTEL_RATING_XPATH))
                         .getText()
                         .replaceAll("[\\D]", ""));
-        System.out.println(rating);
         return rating;
     }
 

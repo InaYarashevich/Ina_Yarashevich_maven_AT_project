@@ -14,6 +14,8 @@ import pages.gui.utils.MailRuInboxFolderPage;
 import pages.gui.utils.MailRuMainPage;
 import utils.CreatingTempMail;
 
+import java.net.MalformedURLException;
+
 
 public class BookingLoginTest {
 
@@ -29,8 +31,11 @@ public class BookingLoginTest {
     private static final Logger LOGGER =
             Logger.getLogger(BookingLoginTest.class.getName());
 
+    public BookingLoginTest() throws MalformedURLException {
+    }
+
     @Before
-    public void startTest(){
+    public void startTest() throws MalformedURLException {
         LOGGER.info("#Starting the test#");
         Driver.getWebDriver().manage().window().maximize();
         Driver.getWebDriver().get("https://trashmail.com/?lang=en");
@@ -54,7 +59,7 @@ public class BookingLoginTest {
     }
 
     @Test
-    public void bookingLoginWithEmailPassword() {
+    public void bookingLoginWithEmailPassword() throws MalformedURLException {
         Driver.getWebDriver().get("https://www.booking.com/");
         mainPage.clickSignIn();
         signInPage.signIn(tempMail.getTempEmail(), "Automation2022!");

@@ -6,12 +6,16 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class MailRuInboxFolderPage {
     public WebDriver driver = Driver.getWebDriver();
     private static final String EMAILS_SUBJECTS_LIST_CSS = ".llc__subject>div>span";
     private static final String CONFIRM_BUTTON_CSS = ".button-link_mr_css_attr";
+
+    public MailRuInboxFolderPage() throws MalformedURLException {
+    }
 
     public void openEmail(String subject) {
 

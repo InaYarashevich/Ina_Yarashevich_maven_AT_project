@@ -11,6 +11,8 @@ import pages.gui.utils.MailRuInboxFolderPage;
 import pages.gui.utils.MailRuMainPage;
 import utils.CreatingTempMail;
 
+import java.net.MalformedURLException;
+
 public class BaseSteps {
 
     BookingMainPage mainPage = new BookingMainPage();
@@ -25,4 +27,6 @@ public class BaseSteps {
     BookingAccountSettingsPage accountSettingsPage = new BookingAccountSettingsPage();
     MailRuMainPage mailRuMainPage = new MailRuMainPage();
 
+    public BaseSteps() throws MalformedURLException {
+    }
 }

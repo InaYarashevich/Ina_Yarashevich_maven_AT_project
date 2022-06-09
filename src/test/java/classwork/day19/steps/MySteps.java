@@ -9,13 +9,18 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.net.MalformedURLException;
+
 public class MySteps {
 
     BookingMainPage mainPage = new BookingMainPage();
     BookingResultPage resultPage = new BookingResultPage();
 
+    public MySteps() throws MalformedURLException {
+    }
+
     @Given("I open test site")
-    public void iOpenTestSite() {
+    public void iOpenTestSite() throws MalformedURLException {
         Driver.getWebDriver().get("https://www.booking.com/");
     }
 

@@ -13,20 +13,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DriverManager {
-    public static WebDriver getDriver(Config config) {
+    public static WebDriver getDriver(Config config)  {
         return switch (config) {
             case CHROME -> getChromeDriver();
             case FIREFOX -> getFirefoxDriver();
             case EDGE -> getEdgeDriver();
             case REMOTE -> getChromeDriver();
-            default -> null;
         };
     }
     private static WebDriver getRemoteDriver() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
-        RemoteWebDriver webDriver =
-                new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-        return webDriver;
+        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
     }
     private static WebDriver getChromeDriver() {
         ChromeOptions caps = new ChromeOptions();

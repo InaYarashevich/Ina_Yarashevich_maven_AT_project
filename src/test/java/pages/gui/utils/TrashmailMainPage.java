@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.net.MalformedURLException;
+
 public class TrashmailMainPage {
 
     public WebDriver driver = Driver.getWebDriver();
@@ -14,6 +16,9 @@ public class TrashmailMainPage {
     private static final String NUMBER_OF_FORWARDS_DROPDOWN_CSS = "#fe-fwd-nb~div";
     private static final String SUBMIT_BUTTON_CSS = "#fe-submit";
     private static final String CREATED_EMAIL_CSS = "#fe-dea";
+
+    public TrashmailMainPage() throws MalformedURLException {
+    }
 
     public String getMail(String realEmail) {
         WebElement emailInput = driver.findElement(By.cssSelector(REAL_EMAIL_CSS));

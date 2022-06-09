@@ -3,17 +3,13 @@ package tests.gui;
 import driver.Config;
 import driver.Driver;
 import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import pages.gui.main.BookingMainPage;
 import pages.gui.searchResults.BookingSearchResultPage;
 
 import java.net.MalformedURLException;
 
-
-public class BookingMaxPriceTest {
+public class BookingColorsTest {
 
     BookingMainPage mainPage = new BookingMainPage();
     BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
@@ -21,12 +17,12 @@ public class BookingMaxPriceTest {
     public static final Logger LOGGER =
             Logger.getLogger(BookingMaxPriceTest.class.getName());
 
-    public BookingMaxPriceTest() throws MalformedURLException {
+    public BookingColorsTest() throws MalformedURLException {
     }
 
-    @Before
-    public void setup(){
-        Driver.setConfig(Config.FIREFOX);
+    @BeforeClass
+    public static void initDriver() {
+        Driver.setConfig(Config.EDGE);
     }
 
     @Test
@@ -42,19 +38,15 @@ public class BookingMaxPriceTest {
         mainPage.selectNumberOfRooms(1);
         LOGGER.info("The number of visitors and rooms are selected");
         mainPage.clickSearch();
-        LOGGER.info("The search started");
-        searchResultPage.filterResultsByPrice("max");
-        LOGGER.info("The results are filtered by price");
-        searchResultPage.sortByLowestPrice();
-        LOGGER.info("The results are sorted by the lowest price first");
-
-        double actualPrice = searchResultPage.getHotelPrice();
-        Assert.assertTrue("The selected hotel price is less than the max price",
-                actualPrice >= searchResultPage.getMaxPrice());
+        LOGGER.info("Started searching");
+        searchResultPage.paintHotelTitleColor(10);
+        LOGGER.info("The title color is changed");
+        Assert.assertEquals("The title is not red!",
+                "#ff0000", searchResultPage.getTitleColor());
     }
 
     @After
-    public void finish(){
+    public void closeDriver(){
         Driver.destroy();
     }
 }

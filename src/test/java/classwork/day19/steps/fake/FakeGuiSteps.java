@@ -9,12 +9,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 
+import java.net.MalformedURLException;
+
 public class FakeGuiSteps {
 
     private static final Logger LOGGER = LogManager.getLogger(FakeBaseSteps.class);
 
     @Given(value = "I go to booking.com")
-    public void checkHeaderTest(){
+    public void checkHeaderTest() throws MalformedURLException {
         Driver.setConfig(Config.REMOTE);
         Driver.getWebDriver().get("https://booking.com");
     }

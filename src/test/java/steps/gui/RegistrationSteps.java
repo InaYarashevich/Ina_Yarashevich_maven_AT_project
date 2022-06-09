@@ -7,7 +7,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.net.MalformedURLException;
+
 public class RegistrationSteps extends BaseSteps {
+
+    public RegistrationSteps() throws MalformedURLException {
+    }
 
     @Given("I register temporary email using my mail.ru {string} account")
     public void iRegisterTemporaryEmailUsingMyMailRuAccount(String realEMail) {
@@ -15,7 +20,7 @@ public class RegistrationSteps extends BaseSteps {
     }
 
     @Given("I open Booking page")
-    public void iOpenBookingPage() {
+    public void iOpenBookingPage() throws MalformedURLException {
         Driver.getWebDriver().get("https://www.booking.com/");
     }
 
@@ -30,7 +35,7 @@ public class RegistrationSteps extends BaseSteps {
     }
 
     @And("I open mail.ru")
-    public void iOpenMailRu() {
+    public void iOpenMailRu() throws MalformedURLException {
         Driver.getWebDriver().get("https://mail.ru/");
     }
 

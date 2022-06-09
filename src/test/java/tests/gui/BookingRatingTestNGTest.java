@@ -4,15 +4,18 @@ import driver.Config;
 import driver.Driver;
 import objects.gui.SearchResults;
 import org.apache.log4j.Logger;
-import org.junit.*;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import pages.gui.main.BookingMainPage;
 import pages.gui.searchResults.BookingSearchResultPage;
 
 import java.util.ArrayList;
 
-public class BookingHotelRatingTest {
+public class BookingRatingTestNGTest {
     BookingMainPage mainPage = new BookingMainPage();
 
     BookingSearchResultPage searchResultPage = new BookingSearchResultPage();
@@ -21,7 +24,7 @@ public class BookingHotelRatingTest {
     private static WebDriver driver;
 
     private static final Logger LOGGER =
-            Logger.getLogger(BookingHotelRatingTest.class.getName());
+            Logger.getLogger(BookingRatingTestNGTest.class.getName());
 
     @BeforeClass
     public static void initDriver() {
@@ -57,11 +60,12 @@ public class BookingHotelRatingTest {
         }
         driver.switchTo().window(tabs.get(1));
 
-        Assert.assertTrue("The actual hotel rating is less than the expected max hotel rating.",
-                searchResultPage.getHotelRating() >= searchResults.getRatingFilterValue());
+        Assert.assertTrue(
+                searchResultPage.getHotelRating() >= searchResults.getRatingFilterValue(),
+                "The actual hotel rating is less than the expected max hotel rating.");
     }
 
-    @After
+    @AfterTest
     public void afterTest() {
         Driver.destroy();
         LOGGER.info("Test finished.");

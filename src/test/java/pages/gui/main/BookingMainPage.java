@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import pages.gui.base.BookingBasePage;
 import utils.DateUtils;
 
+
 import static pages.gui.main.BookingHomepage.SEARCH_INPUT_FIELD_CSS;
 
 public class BookingMainPage extends BookingBasePage {

@@ -11,10 +11,15 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import tests.gui.BookingHotelRatingTest;
 
+import java.net.MalformedURLException;
+
 public class SearchResultsSteps extends BaseSteps{
 
     private static final Logger LOGGER =
             Logger.getLogger(BookingHotelRatingTest.class.getName());
+
+    public SearchResultsSteps() throws MalformedURLException {
+    }
 
     @Before
     public void beforeTest(){

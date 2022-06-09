@@ -3,7 +3,12 @@ package steps.gui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
+import java.net.MalformedURLException;
+
 public class HotelsSearchSteps extends BaseSteps{
+
+    public HotelsSearchSteps() throws MalformedURLException {
+    }
 
     @When("I fill {string}  in the field")
     public void iFillInTheField(String cityName) {
