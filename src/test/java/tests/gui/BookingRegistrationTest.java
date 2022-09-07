@@ -17,25 +17,15 @@ import utils.CreatingTempMail;
 import java.net.MalformedURLException;
 
 public class BookingRegistrationTest extends BookingBasePage {
-
     BookingMainPage mainPage = new BookingMainPage();
     BookingRegistrationPage registrationPage = new BookingRegistrationPage();
-    static CreatingTempMail tempMail;
-
-    static {
-        try {
-            tempMail = new CreatingTempMail();
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     BookingHomepage homepage = new BookingHomepage();
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
     BookingAccountSettingsPage accountSettingsPage = new BookingAccountSettingsPage();
     MailRuMainPage mailRuMainPage = new MailRuMainPage();
     MailRuInboxFolderPage mailRuInboxFolderPage = new MailRuInboxFolderPage();
+    static CreatingTempMail tempMail = new CreatingTempMail();
 
     private static final Logger LOGGER =
             Logger.getLogger(BookingRegistrationTest.class.getName());

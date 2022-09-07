@@ -5,8 +5,21 @@
     <classes>
       <class name="org.junit.runner.Description">
         <methods>
-          <include name="verifyEmailIsConfirmed"/>
-          <include name="registerWithEmailPassword"/>
+          <include name="changeTheNameOfTheMainCharacterTextTest"/>
+          <include name="fetchRandomJokeResponseValueTest"/>
+          <include name="fetchTheNumberOfJokesStatusCodeTest"/>
+          <include name="fetchSpecificJokeTextTest"/>
+          <include name="fetchMultipleRandomJokesStatusCodeTest"/>
+          <include name="fetchMultipleRandomJokesResponseBodyTest"/>
+          <include name="fetchSpecificJokeStatusCodeTest"/>
+          <include name="changeTheNameOfTheMainCharacterResponseTest"/>
+          <include name="changeTheNameOfTheMainCharacterStatusCodeTest"/>
+          <include name="fetchTheNumberOfJokesQuantityTest"/>
+          <include name="fetchTheNumberOfJokesTypeTest"/>
+          <include name="fetchRandomJokeResponseTypeTest"/>
+          <include name="fetchMultipleRandomJokesResponseValueTest"/>
+          <include name="fetchSpecificJokeResponseTypeTest"/>
+          <include name="fetchRandomJokeStatusCodeTest"/>
         </methods>
       </class> <!-- org.junit.runner.Description -->
     </classes>

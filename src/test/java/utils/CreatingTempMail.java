@@ -2,15 +2,9 @@ package utils;
 
 import pages.gui.utils.TrashmailMainPage;
 
-import java.net.MalformedURLException;
-
 public class CreatingTempMail {
-
     TrashmailMainPage mainPage = new TrashmailMainPage();
-    private String tempEmail = null;
-
-    public CreatingTempMail() throws MalformedURLException {
-    }
+    private String tempEmail;
 
     public String getTempEmail() {
         return tempEmail;

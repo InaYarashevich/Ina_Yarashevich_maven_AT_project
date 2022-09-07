@@ -17,7 +17,7 @@ public class TrashmailMainPage {
     private static final String SUBMIT_BUTTON_CSS = "#fe-submit";
     private static final String CREATED_EMAIL_CSS = "#fe-dea";
 
-    public TrashmailMainPage() throws MalformedURLException {
+    public TrashmailMainPage() {
     }
 
     public String getMail(String realEmail) {

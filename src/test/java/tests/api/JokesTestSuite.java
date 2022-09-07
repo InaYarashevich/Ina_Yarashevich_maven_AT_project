@@ -26,7 +26,7 @@ public class JokesTestSuite {
             Logger.getLogger(JokesTestSuite.class.getName());
 
     RequestSpecification requestSpecification = RestAssured.given().spec(new RequestSpecBuilder()
-            .setBaseUri("https://www.shop-apotheke.com")
+            .setBaseUri("https://www.icndb.com")
             .setBasePath("/jokes")
             .setAccept(ContentType.ANY)
             .setContentType(ContentType.JSON)

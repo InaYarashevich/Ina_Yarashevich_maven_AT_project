@@ -17,16 +17,13 @@ public class BookingColorsTest {
     public static final Logger LOGGER =
             Logger.getLogger(BookingMaxPriceTest.class.getName());
 
-    public BookingColorsTest() throws MalformedURLException {
-    }
-
     @BeforeClass
     public static void initDriver() {
         Driver.setConfig(Config.EDGE);
     }
 
     @Test
-    public void getHotelsWithMaxPriceTest() throws MalformedURLException {
+    public void getHotelsWithMaxPriceTest() {
         Driver.getWebDriver().get("https://www.booking.com/");
         LOGGER.info("Navigating to Booking.com main page");
         mainPage.searchCity("Paris");

@@ -22,10 +22,10 @@ public class BookingLoginTest {
     BookingMainPage mainPage = new BookingMainPage();
     BookingSignInPage signInPage = new BookingSignInPage();
     BookingHomepage homepage = new BookingHomepage();
-    CreatingTempMail tempMail = new CreatingTempMail();
     BookingRegistrationPage registrationPage = new BookingRegistrationPage();
     MailRuMainPage mailRuMainPage = new MailRuMainPage();
     MailRuInboxFolderPage mailRuInboxFolderPage = new MailRuInboxFolderPage();
+    CreatingTempMail tempMail = new CreatingTempMail();
 
 
     private static final Logger LOGGER =

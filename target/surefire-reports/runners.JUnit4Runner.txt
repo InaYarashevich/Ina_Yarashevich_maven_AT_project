@@ -1,4 +1,79 @@
 -------------------------------------------------------------------------------
 Test set: runners.JUnit4Runner
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.062 s - in runners.JUnit4Runner
+Tests run: 20, Failures: 15, Errors: 0, Skipped: 0, Time elapsed: 15.905 s <<< FAILURE! - in runners.JUnit4Runner
+fetchMultipleRandomJokesResponseValueTest on fetchMultipleRandomJokesResponseValueTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 4.19 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchMultipleRandomJokesResponseValueTest(JokesTestSuite.java:163)
+
+fetchTheNumberOfJokesTypeTest on fetchTheNumberOfJokesTypeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.913 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchTheNumberOfJokesTypeTest(JokesTestSuite.java:234)
+
+changeTheNameOfTheMainCharacterResponseTest on changeTheNameOfTheMainCharacterResponseTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.498 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.changeTheNameOfTheMainCharacterResponseTest(JokesTestSuite.java:105)
+
+fetchRandomJokeStatusCodeTest on fetchRandomJokeStatusCodeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.65 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at tests.api.JokesTestSuite.fetchRandomJokeStatusCodeTest(JokesTestSuite.java:47)
+
+changeTheNameOfTheMainCharacterTextTest on changeTheNameOfTheMainCharacterTextTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 1.504 s  <<< FAILURE!
+java.lang.NullPointerException
+	at tests.api.JokesTestSuite.changeTheNameOfTheMainCharacterTextTest(JokesTestSuite.java:125)
+
+fetchMultipleRandomJokesResponseBodyTest on fetchMultipleRandomJokesResponseBodyTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.433 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchMultipleRandomJokesResponseBodyTest(JokesTestSuite.java:150)
+
+fetchSpecificJokeTextTest on fetchSpecificJokeTextTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.547 s  <<< FAILURE!
+java.lang.NullPointerException
+	at tests.api.JokesTestSuite.fetchSpecificJokeTextTest(JokesTestSuite.java:207)
+
+fetchMultipleRandomJokesStatusCodeTest on fetchMultipleRandomJokesStatusCodeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.426 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at tests.api.JokesTestSuite.fetchMultipleRandomJokesStatusCodeTest(JokesTestSuite.java:137)
+
+fetchTheNumberOfJokesQuantityTest on fetchTheNumberOfJokesQuantityTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.476 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchTheNumberOfJokesQuantityTest(JokesTestSuite.java:251)
+
+fetchTheNumberOfJokesStatusCodeTest on fetchTheNumberOfJokesStatusCodeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.418 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at tests.api.JokesTestSuite.fetchTheNumberOfJokesStatusCodeTest(JokesTestSuite.java:218)
+
+fetchRandomJokeResponseValueTest on fetchRandomJokeResponseValueTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.656 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchRandomJokeResponseValueTest(JokesTestSuite.java:73)
+
+fetchSpecificJokeStatusCodeTest on fetchSpecificJokeStatusCodeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.394 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at tests.api.JokesTestSuite.fetchSpecificJokeStatusCodeTest(JokesTestSuite.java:177)
+
+changeTheNameOfTheMainCharacterStatusCodeTest on changeTheNameOfTheMainCharacterStatusCodeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.582 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at tests.api.JokesTestSuite.changeTheNameOfTheMainCharacterStatusCodeTest(JokesTestSuite.java:89)
+
+fetchSpecificJokeResponseTypeTest on fetchSpecificJokeResponseTypeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.432 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchSpecificJokeResponseTypeTest(JokesTestSuite.java:190)
+
+fetchRandomJokeResponseTypeTest on fetchRandomJokeResponseTypeTest(tests.api.JokesTestSuite)(tests.api.JokesTestSuite)  Time elapsed: 0.567 s  <<< FAILURE!
+java.lang.IllegalStateException: Cannot parse object because no supported Content-Type was specified in response. Content-Type was 'text/html; charset=utf-8'.
+	at tests.api.JokesTestSuite.fetchRandomJokeResponseTypeTest(JokesTestSuite.java:59)
+
